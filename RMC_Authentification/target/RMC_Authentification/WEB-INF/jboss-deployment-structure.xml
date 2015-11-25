@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
+	<deployment>
+		<exclude-subsystems>
+			<subsystem name="logging" />
+			<!-- Exclusion of REST JBoss subsystem -->
+			<subsystem name="jaxrs" />
+			<subsystem name="webservices"/>
+		</exclude-subsystems>
+
+		<exclusions>
+
+			<!-- Exclusion of logging JBoss modules -->
+			<module name="org.slf4j" />
+			<module name="org.slf4j.impl" />
+			<module name="org.slf4j.ext" />
+			<module name="org.slf4j.jcl-over-slf4j" />
+			<module name="org.jboss.log4j.logmanager" />
+			<module name="org.jboss.logging" />
+			<module name="org.jboss.logging.jul-to-slf4j-stub" />
+			<!-- Exclusion of REST JBoss module -->
+			<module name="javaee.api" />
+			
+			<module name="javax.ws.rs.api"/>
+            <module name="org.jboss.resteasy" />
+            <module name="org.jboss.resteasy.resteasy-atom-provider" />
+            <module name="org.jboss.resteasy.resteasy-cdi" />
+            <module name="org.jboss.resteasy.resteasy-jaxrs" />
+            <module name="org.jboss.resteasy.resteasy-jaxb-provider" />
+            <module name="org.jboss.resteasy.resteasy-jackson-provider" />
+            <module name="org.jboss.resteasy.resteasy-jsapi" />
+            <module name="org.jboss.resteasy.resteasy-multipart-provider" />
+            <module name="org.jboss.resteasy.async-http-servlet-30" />
+		</exclusions>
+	</deployment>
+</jboss-deployment-structure>

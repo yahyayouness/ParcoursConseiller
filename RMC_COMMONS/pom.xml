@@ -9,4 +9,5 @@
   <artifactId>RMC_COMMONS</artifactId>
   <packaging>pom</packaging>
   <name>RMC_COMMONS</name>
+  <description>POM project regroupant les utilitaires du projet</description>
 </project>

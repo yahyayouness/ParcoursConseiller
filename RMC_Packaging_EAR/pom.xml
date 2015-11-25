@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.edf.rmc.ear</groupId>
+		<artifactId>RMC_EAR</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>RMC_Packaging_EAR</artifactId>
+	<packaging>ear</packaging>
+	<name>RMC_Packaging_EAR</name>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<configuration>
+					<generatedDescriptorLocation>${basedir}/src/main/application/META-INF</generatedDescriptorLocation>
+					<modules>
+						<webModule>
+							<groupId>com.edf.rmc.authentification</groupId>
+							<artifactId>RMC_Authentification</artifactId>
+							<contextRoot>RMC_Authentification</contextRoot>
+						</webModule>
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.edf.rmc.authentification</groupId>
+			<artifactId>RMC_Authentification</artifactId>
+			<version>${project.version}</version>
+			<type>war</type>
+		</dependency>
+	</dependencies>
+</project>

@@ -14,5 +14,6 @@
   
 	<modules>
 		<module>../RMC_Authentification</module>
+		<module>../RMC_</module>
 	</modules>
 </project>

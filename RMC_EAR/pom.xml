@@ -11,6 +11,6 @@
   <name>RMC_EAR</name>
   
   	<modules>
-		<module>../RMC_Packaging_EAR</module>
+<!-- 		<module>../RMC_Packaging_EAR</module> -->
 	</modules>
 </project>

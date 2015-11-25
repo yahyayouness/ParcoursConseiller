@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://www.edf.fr/psc/0022/consulterInfosSociete"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.edf.fr/psc/0022/consulterInfosSociete">
+	<types>
+		<xsd:schema elementFormDefault="qualified"
+			attributeFormDefault="unqualified"
+			targetNamespace="http://www.edf.fr/psc/0022/consulterInfosSociete"
+			xmlns:xsdLocal2="http://www.edf.fr/psc/0022/consulterInfosSociete"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:annotation>
+				<xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All
+					rights reserved. Siebel XSD Generation
+				</xsd:documentation>
+			</xsd:annotation>
+			<xsd:element name="consulterInfosSociete_Response"
+				type="xsdLocal2:consulterInfosSociete_Response"></xsd:element>
+			<xsd:complexType name="consulterInfosSociete_ResponseTopElmt">
+				<xsd:sequence>
+					<xsd:element name="consulterInfosSociete_Response"
+						maxOccurs="1" minOccurs="1" type="xsdLocal2:consulterInfosSociete_Response"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="consulterInfosSociete_Response">
+				<xsd:sequence>
+					<xsd:element name="EtatService" maxOccurs="1"
+						minOccurs="1" type="xsdLocal2:EtatService"></xsd:element>
+					<xsd:element name="DonneesRetour" maxOccurs="1"
+						minOccurs="0" type="xsdLocal2:DonneesRetour"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="EtatService">
+				<xsd:sequence>
+					<xsd:element name="CodeEtatService" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="LibelleEtatService" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="EtapeService" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="DonneesRetour">
+				<xsd:sequence>
+					<xsd:element name="MosaiqueMessageOut" maxOccurs="1"
+						minOccurs="1" type="xsdLocal2:MosaiqueMessageOut"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="MosaiqueMessageOut">
+				<xsd:sequence>
+					<xsd:element name="ETABLISSEMENT" maxOccurs="unbounded"
+						minOccurs="0" type="xsdLocal2:ETABLISSEMENT"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ETABLISSEMENT">
+				<xsd:sequence>
+					<xsd:element name="SIRET" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="FLG_EXIST" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="CHAMP" maxOccurs="unbounded"
+						minOccurs="0" type="xsdLocal2:CHAMP"></xsd:element>
+					<xsd:element name="SCORE" maxOccurs="unbounded"
+						minOccurs="0" type="xsdLocal2:SCORE"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="CHAMP">
+				<xsd:sequence>
+					<xsd:element name="NOM_CHAMP" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="VALEUR_CHAMP" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="SCORE">
+				<xsd:sequence>
+					<xsd:element name="TYPE_SCORE" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="VALEUR_SCORE" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+		<xsd:schema elementFormDefault="qualified"
+			attributeFormDefault="unqualified"
+			targetNamespace="http://www.edf.fr/psc/0022/consulterInfosSociete"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element name="CustomHeaderContext">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:any></xsd:any>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="rechercheMosaique_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="tns:CustomHeaderContext" minOccurs="0"></xsd:element>
+						<xsd:element ref="tns:rechercheMosaique" minOccurs="0"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="_XMLHierarchyOutput">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:any></xsd:any>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="rechercheMosaique_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="faultactor" minOccurs="0" type="xsd:string"></xsd:element>
+						<xsd:element ref="tns:CustomHeaderContext" minOccurs="0"></xsd:element>
+						<xsd:element ref="tns:_XMLHierarchyOutput" minOccurs="0"></xsd:element>
+						<xsd:element ref="tns:consulterInfosSociete_Response"
+							minOccurs="0"></xsd:element>
+						<xsd:element name="faultcode" minOccurs="0" type="xsd:string"></xsd:element>
+						<xsd:element name="faultstring" minOccurs="0" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+		<xsd:schema elementFormDefault="qualified"
+			attributeFormDefault="unqualified"
+			xmlns:xsdLocal1="http://www.edf.fr/psc/0022/consulterInfosSociete"
+			targetNamespace="http://www.edf.fr/psc/0022/consulterInfosSociete"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:annotation>
+				<xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All
+					rights reserved. Siebel XSD Generation
+				</xsd:documentation>
+			</xsd:annotation>
+			<xsd:element name="rechercheMosaique" type="xsdLocal1:rechercheMosaique"></xsd:element>
+			<xsd:complexType name="rechercheMosaiqueTopElmt">
+				<xsd:sequence>
+					<xsd:element name="rechercheMosaique" maxOccurs="1"
+						minOccurs="1" type="xsdLocal1:rechercheMosaique"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="rechercheMosaique">
+				<xsd:sequence>
+					<xsd:element name="SIRET" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+	</types>
+	<message name="rechercheMosaique_Input">
+		<part name="rechercheMosaique_Input" element="tns:rechercheMosaique_Input"></part>
+	</message>
+	<message name="rechercheMosaique_Output">
+		<part name="rechercheMosaique_Output" element="tns:rechercheMosaique_Output"></part>
+	</message>
+	<portType name="MosaiqueControllerPort">
+		<operation name="rechercheMosaique">
+			<input message="tns:rechercheMosaique_Input"></input>
+			<output message="tns:rechercheMosaique_Output"></output>
+		</operation>
+	</portType>
+	<binding name="MosaiqueControllerPort" type="tns:MosaiqueControllerPort">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"
+			style="document"></soap:binding>
+		<operation name="rechercheMosaique">
+			<soap:operation soapAction="http://www.edf.fr/psc/0022/consulterInfosSociete"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+	</binding>
+	<service name="consulterInfosSociete_V1-0">
+		<port binding="tns:MosaiqueControllerPort" name="MosaiqueControllerPort">
+			<soap:address
+				location="http://pcyy04ivb.pcy.edfgdf.fr:5610/ws/consulterInfosSociete_V1-0"></soap:address>
+		</port>
+	</service>
+</definitions>
