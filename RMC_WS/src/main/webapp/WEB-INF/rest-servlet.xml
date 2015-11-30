@@ -14,8 +14,10 @@
 
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
-	
 
+
+	
+	<import resource="classpath:applicationContexteConfig.xml" />
 	<import resource="classpath:applicationContextCommun.xml" />
 	<import resource="classpath:applicationContextClientWs.xml" />
 	<import resource="classpath:applicationContextAop.xml" />
@@ -52,7 +54,7 @@
 	<bean id="infosSocieteService" class="com.rmc.ws.accueil.ConsulterInfosSocieteService"></bean>
 	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
 	<bean id="exceptionHandler" class="com.rmc.ws.exception.handler.RmcExceptionHandler" />
-	
+
 
 	<jaxrs:server id="infosSociete" address="/societe">
 		<jaxrs:serviceBeans>

@@ -133,8 +133,11 @@
 		</pluginRepository>
 	</pluginRepositories>
 
-	<dependencies>
+<!-- 	Ajouter les plugins management avec leurs versions -->
 
+
+<!-- 	les dependences du projet -->
+	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
@@ -148,6 +151,7 @@
 			<version>${servletapi.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -207,16 +211,6 @@
 			<version>${cxf.version}</version>
 		</dependency>
 
-		<!-- <dependency> -->
-		<!-- <groupId>org.apache.cxf</groupId> -->
-		<!-- <artifactId>cxf-bundle</artifactId> -->
-		<!-- <version>2.7.18</version> -->
-		<!-- </dependency> -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.apache.cxf</groupId> -->
-		<!-- <artifactId>cxf-rt-core</artifactId> -->
-		<!-- <version>2.7.18</version> -->
-		<!-- </dependency> -->
 		<dependency>
 			<groupId>commons-httpclient</groupId>
 			<artifactId>commons-httpclient</artifactId>
@@ -261,15 +255,12 @@
 			<version>1.6.11</version>
 		</dependency>
 
-
 		<!-- JavaConfig need this library -->
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
 			<version>2.2.2</version>
 		</dependency>
-
-
 
 		<!-- Logger -->
 		<dependency>
@@ -293,17 +284,23 @@
 			<version>1.2.9</version>
 		</dependency>
 
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>1.7</version>
+		</dependency>
+
 	</dependencies>
 
 
 	<modules>
-<!-- 		Jars communs, necessaires au reste des jars -->
+		<!-- Jars communs, necessaires au reste des jars -->
 		<module>../RMC_COMMONS</module>
-<!-- 		ensemble des jars -->
+		<!-- ensemble des jars -->
 		<module>../RMC_JAR</module>
-<!-- 		web apps -->
+		<!-- web apps -->
 		<module>../RMC_WAR</module>
-<!-- 		EARS -->
+		<!-- EARS -->
 		<module>../RMC_EAR</module>
 	</modules>
 

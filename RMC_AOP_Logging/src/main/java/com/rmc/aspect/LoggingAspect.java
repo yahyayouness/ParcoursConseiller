@@ -12,8 +12,12 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 
-//import org.aspectj.lang.annotation.Before;
-
+/**
+ * Classe définissant le contenu de l'aspect du logging.
+ * 
+ * @author yyahia
+ * 
+ */
 @Aspect
 public class LoggingAspect {
 
@@ -23,10 +27,12 @@ public class LoggingAspect {
 	/**
 	 * Simple date format.
 	 */
-	private static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat(
-			"yyyy-MM-dd hh:mm:ss.SSS");
+	private static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
 
-	private  long start;
+	/**
+	 * FIXME check if it's not thread safe and use Thread Locale.
+	 */
+	private long start;
 
 	@Before("@annotation(com.rmc.annotations.Loggable)")
 	public void logAvantAppel(JoinPoint joinPoint) {
@@ -44,25 +50,22 @@ public class LoggingAspect {
 	public void logApresAppel(JoinPoint joinPoint) {
 		final String nomMethode = joinPoint.getSignature().getName();
 		LOG.info("Fin d'appel au service " + nomMethode + " at " + simpleDateFormat.format(new Date()));
-		LOG.info("Temps de traitement du service = "
-				+ (System.currentTimeMillis() - start) + " ms");
+		LOG.info("Temps de traitement du service = " + (System.currentTimeMillis() - start) + " ms");
 		LOG.info("************************************************************************");
 
 	}
 
-	@AfterReturning(pointcut="@annotation(com.rmc.annotations.Loggable)",returning= "result")
+	@AfterReturning(pointcut = "@annotation(com.rmc.annotations.Loggable)", returning = "result")
 	public void logResultatAppel(JoinPoint joinPoint, Object result) {
 
-		LOG.info("Reponse du service = "
-				+ (result != null ? result : "Ne retourne rien"));
+		LOG.info("Reponse du service = " + (result != null ? result : "Ne retourne rien"));
 	}
 
 	@AfterThrowing(pointcut = "@annotation(com.rmc.annotations.Loggable)", throwing = "error")
 	public void logException(JoinPoint joinPoint, Throwable error) {
 		final String nomMethode = joinPoint.getSignature().getName();
 		LOG.error("************************************************************************");
-		LOG.error("Erreur lors de l'appel du service " + nomMethode + " at "
-				+ simpleDateFormat.format(new Date()));
+		LOG.error("Erreur lors de l'appel du service " + nomMethode + " at " + simpleDateFormat.format(new Date()));
 		LOG.error("Détails de l'erreur : ", error);
 		LOG.error("************************************************************************");
 	}

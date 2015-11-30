@@ -10,5 +10,11 @@
 	<artifactId>RMC_JAR</artifactId>
 	<packaging>pom</packaging>
 	<name>RMC_JAR</name>
+	<description>Projet qui regroupant les jars RMC </description>
+<!-- 	Ajouter les dependences communes au jar -->
 
+	<modules>
+		<module>../RMC_Client_WS</module>
+		<module>../RMC_DAO</module>
+	</modules>
 </project>

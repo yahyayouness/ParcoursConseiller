@@ -24,11 +24,11 @@ import javax.ws.rs.core.MediaType;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import com.rmc.annotations.Loggable;
-import com.rmc.authentification.dto.*;
+import com.rmc.authentification.dto.LoginResponse;
+import com.rmc.authentification.dto.TokenValidity;
+import com.rmc.authentification.dto.User;
 
 @Path("/auth")
 @Consumes(MediaType.APPLICATION_JSON)

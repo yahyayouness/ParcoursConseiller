@@ -11,6 +11,7 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.rmc.annotations.Loggable;
+import com.rmc.configuration.RmcConfiguration;
 import com.rmc.exception.ExceptionUtils;
 import com.rmc.exception.fonctionnelle.accueil.SiretNotValidException;
 import com.rmc.ws.accueil.dto.InfosSociete;
@@ -28,6 +29,9 @@ public class ConsulterInfosSocieteService {
 	 * Liste de code des exceptions remontées par le service.
 	 */
 	private static final String XXX_XXX_TIXX_E0000 = "XXX-XXX-TIXX-E0000";
+	
+	@Autowired
+	private RmcConfiguration config;
 	/**
 	 * 
 	 * 
@@ -50,6 +54,7 @@ public class ConsulterInfosSocieteService {
 			final @PathParam(value = "num") String siret)
 			throws ServletException, SiretNotValidException {
 
+		String test =config.getEnvironnement();
 		if (null == siret || siret.trim().isEmpty()) {
 
 			Object[] params = new Object [] {siret};

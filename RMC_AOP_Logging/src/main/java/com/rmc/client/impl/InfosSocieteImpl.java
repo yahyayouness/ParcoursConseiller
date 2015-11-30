@@ -7,8 +7,6 @@ import org.springframework.stereotype.Component;
 import com.rmc.annotations.Loggable;
 import com.rmc.client.interfaces.IInfosSociete;
 import com.rmc.exception.ExceptionUtils;
-import com.rmc.exception.RmcFunctionalException;
-import com.rmc.exception.RmcTechnicalException;
 import com.rmc.exception.fonctionnelle.accueil.SiretNotValidException;
 
 /**
