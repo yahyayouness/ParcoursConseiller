@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="RMC"
+	xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+	<description>RMC ruleset for PMD Plugin</description>
+	<exclude-pattern>.*/*Bouchon.java</exclude-pattern>
+	<exclude-pattern>.*/*Mock.java</exclude-pattern>
+	<exclude-pattern>.*/*Test.java</exclude-pattern>
+	<exclude-pattern>.*/ws/client/.*</exclude-pattern>
+	<exclude-pattern>.*/org/w3/_2001/xmlschema/.*</exclude-pattern>
+	<rule ref="rulesets/java/naming.xml/ClassNamingConventions">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/naming.xml/AvoidDollarSigns">
+		<priority>4</priority>
+	</rule>
+	<rule ref="rulesets/java/naming.xml/MethodWithSameNameAsEnclosingClass">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/naming.xml/SuspiciousHashcodeMethodName">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/naming.xml/SuspiciousConstantFieldName">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/naming.xml/SuspiciousEqualsMethodName">
+		<priority>2</priority>
+	</rule>
+	<rule ref="rulesets/java/migrating.xml/ReplaceHashtableWithMap">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/migrating.xml/ReplaceEnumerationWithIterator">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/migrating.xml/AvoidEnumAsIdentifier">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/migrating.xml/AvoidAssertAsIdentifier">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/migrating.xml/IntegerInstantiation">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/logging-java.xml/SystemPrintln">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/logging-java.xml/AvoidPrintStackTrace">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/braces.xml/IfStmtsMustUseBraces">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/braces.xml/WhileLoopsMustUseBraces">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/braces.xml/IfElseStmtsMustUseBraces">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/braces.xml/ForLoopsMustUseBraces">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/strings.xml/UseIndexOfChar">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/strings.xml/UselessStringValueOf">
+		<priority>4</priority>
+	</rule>
+	<rule ref="rulesets/java/strings.xml/StringBufferInstantiationWithChar">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/codesize.xml/NcssMethodCount">
+		<priority>3</priority>
+		<properties>
+			<property name="minimum" value="50" />
+		</properties>
+	</rule>
+	<rule ref="rulesets/java/codesize.xml/NcssTypeCount">
+		<priority>3</priority>
+		<properties>
+			<property name="minimum" value="800" />
+		</properties>
+	</rule>
+	<rule ref="rulesets/java/imports.xml/DontImportJavaLang">
+		<priority>4</priority>
+	</rule>
+	<rule ref="rulesets/java/clone.xml/CloneThrowsCloneNotSupportedException">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/logging-jakarta-commons.xml/UseCorrectExceptionLogging">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/CollapsibleIfStatements">
+		<priority>4</priority>
+	</rule>
+	<rule ref="rulesets/java/design.xml/PreserveStackTrace">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/sunsecure.xml/ArrayIsStoredDirectly">
+		<priority>2</priority>
+	</rule>
+	<rule ref="rulesets/java/strictexception.xml/SignatureDeclareThrowsException">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/strictexception.xml/ExceptionAsFlowControl">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/strictexception.xml/AvoidCatchingNPE">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/strictexception.xml/AvoidThrowingRawExceptionTypes">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/strictexception.xml/AvoidThrowingNullPointerException">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/strictexception.xml/AvoidRethrowingException">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/strings.xml/AvoidDuplicateLiterals">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/strings.xml/StringInstantiation">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/strings.xml/StringToString">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/strings.xml/InefficientStringBuffering">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/strings.xml/UnnecessaryCaseChange">
+		<priority>4</priority>
+	</rule>
+	<rule ref="rulesets/java/strings.xml/UseStringBufferLength">
+		<priority>4</priority>
+	</rule>
+	<rule ref="rulesets/java/design.xml/InstantiationToGetClass">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/design.xml/IdempotentOperations">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/design.xml/MissingStaticMethodInNonInstantiatableClass">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/design.xml/AvoidInstanceofChecksInCatchClause">
+		<priority>4</priority>
+	</rule>
+	<rule ref="rulesets/java/design.xml/SimplifyConditional">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/design.xml/CompareObjectsWithEquals">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/design.xml/UnnecessaryLocalBeforeReturn">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/UselessOverridingMethod">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/ClassCastExceptionWithToArray">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/AvoidDecimalLiteralsInBigDecimalConstructor">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/UselessOperationOnImmutable">
+		<priority>2</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/UnusedNullCheckInEquals">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/BrokenNullCheck">
+		<priority>2</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/BigIntegerInstantiation">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/design.xml/ConstructorCallsOverridableMethod">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/design.xml/FinalFieldCouldBeStatic">
+		<priority>4</priority>
+	</rule>
+	<rule ref="rulesets/java/design.xml/CloseResource">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/coupling.xml/LooseCoupling">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/optimizations.xml/UseArraysAsList">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/optimizations.xml/AvoidArrayLoops">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/EmptyIfStmt">
+		<priority>2</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/EmptyWhileStmt">
+		<priority>2</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/EmptyTryBlock">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/EmptyFinallyBlock">
+		<priority>2</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/EmptySwitchStatements">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/EmptySynchronizedBlock">
+		<priority>2</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/EmptyStaticInitializer">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/UnconditionalIfStatement">
+		<priority>2</priority>
+	</rule>
+	<rule ref="rulesets/java/basic.xml/BooleanInstantiation">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/finalizers.xml/EmptyFinalizer">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/finalizers.xml/FinalizeOverloaded">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/finalizers.xml/FinalizeDoesNotCallSuperFinalize">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/finalizers.xml/AvoidCallingFinalize">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/unusedcode.xml/UnusedPrivateField">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/unusedcode.xml/UnusedLocalVariable">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/unusedcode.xml/UnusedPrivateMethod">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/unusedcode.xml/UnusedFormalParameter">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/unusedcode.xml/UnusedModifier">
+		<priority>5</priority>
+	</rule>
+	<rule ref="rulesets/java/controversial.xml/DontImportSun">
+		<priority>4</priority>
+	</rule>
+	<rule ref="rulesets/java/design.xml/SingularField">
+		<priority>4</priority>
+	</rule>
+	<rule ref="rulesets/java/optimizations.xml/UseArrayListInsteadOfVector">
+		<priority>3</priority>
+	</rule>
+	<rule ref="rulesets/java/design.xml/EqualsNull">
+		<priority>2</priority>
+	</rule>
+	<rule ref="rulesets/java/strictexception.xml/AvoidCatchingThrowable">
+		<priority>2</priority>
+	</rule>
+	<rule ref="rulesets/java/migrating.xml/ReplaceVectorWithList">
+		<priority>3</priority>
+	</rule>
+
+	<rule language="java" name="RespecterLesStandardsSun" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Les standards de mise en page préconisés par SUN doivent être respectés." externalInfoUrl="http://RMC-forge/TODO">
+		<description>        	&lt;p&gt;Les &lt;a href="http://java.sun.com/docs/codeconv/html/CodeConvTOC.doc.html"&gt;standards de mise en page préconisés par SUN&lt;/a&gt; doivent être respectés.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="LesAccoladesSontObligatoire" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Qu’il y ait une ou plusieurs instructions dans une structure de contrôle (if,do,do while,for,…), les accolades doivent être mises."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Qu’il y ait une ou plusieurs instructions dans une structure de contrôle (if,do,do while,for,…), les accolades doivent être mises.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+		<example>        	 public void maMethode() {/* Utilisation des accolades    pour entourer une ligne    de code à la suite de if    ou else même si elles    ne sont pas nécessaires :*/       if (a==b) {           return true ;       }}        	        	        </example>
+	</rule>
+	<rule language="java" name="LeMotCleElseEstObligatoire" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Les mots-clés « else » devraient être mis après les if afin de s’assurer que tous les cas sont traités." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les mots-clés « else » devraient être mis après les if afin de s’assurer que tous les cas sont traités.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+		<example>        	//Contre-exemple :public Personne read(..) {	if (connection != null) {   	// traitement	} // ici il manque un else}        	        </example>
+	</rule>
+	<rule language="java" name="UneInstructionParLigne" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Il devrait y avoir une instruction par ligne."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Il devrait y avoir une instruction par ligne.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser                 		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'eclipse']                                    </value>
+			</property>
+		</properties>
+		<example>        	// Exemple :l_operande = in_operande * in_operande;i++;l_chaine.append(l_unLibelle);        	        </example>
+	</rule>
+	<rule language="java" name="AccoladeOuvranteEnFinDeLigne" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="L’accolade ouvrante doit être à la fin de la ligne qui commence le bloc." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;L’accolade ouvrante doit être à la fin de la ligne qui commence le bloc.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle ou eclipse']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="AccoladeFermante" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="L’accolade ouvrante doit être à la fin de la ligne qui commence le bloc." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;L’accolade fermante doit être sur une nouvelle ligne indentée au même niveau que l’accolade ouvrante.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle ou eclipse']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="PresentationStructureIf" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="L’accolade ouvrante doit être à la fin de la ligne qui commence le bloc." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Quand il y a plusieurs if/else, tout devrait être indenté au même niveau&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle ou eclipse']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="SwitchStmtsShouldHaveDefault" since="1.0" ref="rulesets/java/design.xml/SwitchStmtsShouldHaveDefault"
+		message="Tous les blocs switch doivent avoir un cas par défaut (default) qui doit se trouver à la fin du bloc." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Tous les blocs switch doivent avoir un cas par défaut (default) qui doit se trouver à la fin du bloc.&lt;/p&gt; </description>
+		<priority>1</priority>
+	</rule>
+	<rule language="java" name="MissingBreakInSwitch" since="1.0" ref="rulesets/java/design.xml/MissingBreakInSwitch"
+		message=" Un commentaire doit être ajouté en cas d’absence de clause break (si c'est le cas, ignorer ce message)." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;A chaque fois qu’un cas continue sur le cas suivant (absence de clause break), veillez àajouter un commentaire pour améliorer la compréhension de l’algorithme (voir exemple ci-dessous). On peut facilement penser que le break a été oublié.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<example>			switch (condition) {	case ABC:		instruction;		/* Continue dessous */	case DEF:		instruction;		break;	case XYZ:		instruction;		break;	default:		instruction;		break;}			       </example>
+	</rule>
+	<rule language="java" name="UnEspaceApresUneVirgule" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Un espace doit être mis après une virgule."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Un espace doit être mis après une virgule.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlée par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="UnEspaceApresLOperateurEgal" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Un espace doit être mis avant et après le = (sauf pour l’opérateur += )." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Un espace doit être mis avant et après le = (sauf pour l'opérateur += ).&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="IndentationDeQuatreEspaces" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Les lignes de code sont indentées de 4 espaces par rapport aux accolades." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les lignes de code sont indentées de 4 espaces par rapport aux accolades.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle ou eclipse']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="UnSautDeLigneApresUneMethode" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Les sauts de ligne doivent être utilisés dans les méthodes afin d’en clarifier la lecture." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les sauts de ligne doivent être utilisés dans les méthodes afin d’en clarifier la lecture.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<!-- <rule language="java" name="TailleMaxDUneLigne" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Il ne devrait pas -->
+	<!-- y avoir de lignes de plus de 140 caractères." -->
+	<!-- externalInfoUrl="http://RMC-forge/TODO"> -->
+	<!-- <description> &lt;p&gt;Il ne devrait pas y avoir de -->
+	<!-- lignes de plus de 140 caractères.&lt;/p&gt; </description> -->
+	<!-- <priority>1</priority> -->
+	<!-- <properties> -->
+	<!-- <property name="xpath"> -->
+	<!-- <value> //ClassOrInterfaceBodyDeclaration[ -->
+	<!-- count(descendant-or-self::*[@EndColumn &gt; 140]) &gt; 0] </value> -->
+	<!-- </property> -->
+	<!-- </properties> -->
+	<!-- </rule> -->
+	<rule language="java" name="NePasUtiliserLesCookies" class="net.sourceforge.pmd.lang.rule.XPathRule" since="1.0"
+		message="Les cookies client ne devraient pas être utilisés." externalInfoUrl="TODO">
+		<description>			&lt;p&gt;La gestion des cookies client peut être désactivée côté navigateur Web. Dès lors qu’elle estdésactivée, il n’est plus possible de gérer une HttpSession.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                                        //ClassOrInterfaceBodyDeclaration[@Label = 'TODO']		                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="UtiliserLaReecritureDURLPourLesLiens" class="net.sourceforge.pmd.lang.rule.XPathRule" since="1.0"
+		message="L’URL rewriting devrait être utilisée pour gérer la session client." externalInfoUrl="TODO">
+		<description>			&lt;p&gt;L’URL rewriting devrait être utilisée pour gérer la session client. L’URL rewriting est une technique qui consiste à générer les liens avec une id de session.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                                        //ClassOrInterfaceBodyDeclaration[@Label = 'TODO']		                    </value>
+			</property>
+		</properties>
+		<example>        	&lt;a href="&lt;%=response.encodeURL("maPage.jsp")%&gt;"&gt;Mon lien&lt;/a&gt; </example>
+	</rule>
+	<rule language="java" name="LimiterUtilisationSession" class="net.sourceforge.pmd.lang.rule.XPathRule" since="1.0"
+		message="Une HttpSession devrait être créée uniquement en cas de besoin." externalInfoUrl="TODO">
+		<description>			&lt;p&gt;Une HttpSession devrait être créée uniquement en cas de besoin.&lt;/p&gt;&lt;p&gt;On devrait éviter de créer des HttpSession inutilement. Afin de prévenir des créationsintempestives de HttpSession en accédant directement à une page JSP, il faut rajouter ladirective ci contre:&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    //ClassOrInterfaceBodyDeclaration[@Label = 'TODO']		    		                </value>
+			</property>
+		</properties>
+		<example>        	      &lt;%@ page session="false" %&gt; </example>
+	</rule>
+	<rule language="java" name="UneClassePublique" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Une seule classe publique doit être déclarée par fichier source."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Une seule classe publique doit être déclarée par fichier source.&lt;/p&gt;&lt;p&gt;Une classe publique est déclarée dans un fichier .java portant le nom de la classe. Lecompilateur java n’autorise pas la déclaration de 2 classes publiques dans le même fichier.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = "javac"]                                    </value>
+			</property>
+		</properties>
+		<example>                // Exemple non compilable :    public class Voiture{    }    public class Velo{    }            			</example>
+	</rule>
+	<rule language="java" name="UneClasseParSource" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Il ne doit y avoir qu''une seule classe par fichier source."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Il ne doit y avoir qu’une seule classe par fichier source. Les classes privée sonten conséquence interdites.&lt;/p&gt;&lt;p&gt;En effet, les "inner classes" impliquent une bonne maitrise du langage Java et sont souventcomplexe à maintenir. Leur utilisation est donc déconseillé, sans accord préalable de l'architecte du projet.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = "javac"]                                    </value>
+			</property>
+		</properties>
+		<example>                // Exemple non compilable :    public class Voiture{    }    public class Velo{    }            			</example>
+	</rule>
+	<rule language="java" name="OrganiserLesPaquetages" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Les imports de packages doivent être organisés."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les imports de packages doivent être organisés.&lt;/p&gt;&lt;p&gt;On recommande l’ordre suivant :&lt;/p&gt;&lt;ul&gt;	&lt;li&gt;Les packages de l’API java (java.io, java.util, …) ; &lt;/li&gt;   &lt;li&gt;Les packages des extensions java (javax.naming, javax.swing, …) ;&lt;/li&gt;   &lt;li&gt;Les packages standard extérieurs comme les standards CORBA et XML (org.omg.CORBA, org.w3c.dom, org.xml.sax, …) ;&lt;/li&gt;	&lt;li&gt;Les packages utilitaires propriétaires, comme un outil de reporting ou un parseur XML (com.ibm.*, …) ;&lt;/li&gt;   &lt;li&gt;Les packages open sources comme un outil de mapping ou un gestionnaire de log (net.sf.hibernate,org.apache.log4j,…)&lt;/li&gt;	&lt;li&gt;Les packages des projets “maison” (fr.gouv.education.RMC...).&lt;/li&gt;&lt;/ul&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="GroupeImportSepareParLigneBlanche" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Chaque groupe d’imports doit être séparé par une ligne blanche" externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Chaque groupe d’imports doit être séparé par une ligne blanche&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="PaquetageAvantImport" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Les imports doivent être placés après l’instruction package."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les imports doivent être placés après l’instruction package.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'javac']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="ImportAvantJavadocClass" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Les imports doivent être placés avant le bloc de commentaire Javadoc de la classe." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les imports doivent être placés avant le bloc de commentaire Javadoc de la classe.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+		<example>        	// Ceci est un exempleimport java.util.Vector ;/** * Commentaire javadoc  * de la classe... */public class MaClasse        	        </example>
+	</rule>
+	<rule language="java" name="AvoidStarImport" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Les classes doivent être importées de manière explicite."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les classes doivent être importées de manière explicite. Le bloc import doit contenir tous les types et seulement les typesutilisés par la classe du fichier. L'étoile ne doit pas être utilisée dans la déclaration d’imports delibrairie.&lt;/p&gt;&lt;p&gt;Par conséquent, la présence de type pleinement qualifié dans le corps de la classe n'est pas autorisée.L'étoile ne doit pas être utilisée dans la déclaration d’imports de librairie.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+		<example>        	// Ceci est un exemple// d'import expliciteimport java.util.Vector ;        	        </example>
+		<example>        	// Ceci est un contre exemple// d'import implicite, qui// entraîne l'import de// l'ensemble des classe// du package java.util !import java.util.* ;        	        </example>
+	</rule>
+	<rule language="java" name="UseStringBufferForStringAppends" ref="rulesets/java/optimizations.xml/UseStringBufferForStringAppends"
+		since="1.0" message="Les StringBuffers doivent être utilisés lors de concaténation de chaînes de caractères." externalInfoUrl="http://RMC-forge/TODO">
+		<description>			&lt;p&gt;Les StringBuffers Les StringBuffer doivent être utilisés lors d doivent être utilisés lors de concaténation de chaînes de caractères.&lt;/p&gt; </description>
+		<example>			// Remplacer:String chaine = « My name is : » + person.getName() +   « I live at this address » + person.getAddress() ;// par :StringBuffer chaineSB = new StringBuffer(« My name is : ») ;chaineSB.append(person.getName()) ;chaineSB.append(« I live at this address ») ;chaineSB.append(person.getAddress()) ;String chaine = chaineSB.toString() ;					</example>
+	</rule>
+	<rule language="java" name="NomDeClasseEnFrancais" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Les classes doivent porter des noms communs en français."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les classes doivent porter des noms communs en français.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et n'est utiliser que pour                		  dans le cas où le respect de la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse				  * non outilliable si la règle ne peut simplement être outillé                	 -->                    //ClassOrInterfaceBodyDeclaration[@Label = 'non-outilliable']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="ClassNamingConventions" since="1.0" ref="rulesets/java/naming.xml/ClassNamingConventions"
+		message="La première lettre de chaque mot doit être en majuscule, et le mot ne doit pas contenir de ''underscore'' (''_'')"
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;La première lettre de chaque mot doit être en majuscule, et le mot ne doit pas contenir de 'underscore' (_)&lt;/p&gt; </description>
+		<priority>1</priority>
+		<example>// Contre-exemples :public class voiture{ } public class camion_et_remorque { }          </example>
+	</rule>
+	<rule language="java" name="NomDeClasseExplicite" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Les noms de classes utilisés doivent être significatifs."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les noms utilisés doivent être significatifs et porter un sens donnant une connaissance du rôle de la classe.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    //ClassOrInterfaceDeclaration[string-length(@Image) &lt; 3]                                    </value>
+			</property>
+		</properties>
+		<example>        	//A priori cette classe représente // une voitureclass Voiture{ } 	// De quoi s'agit il ?class IsbDeux{ } 				        </example>
+	</rule>
+	<rule language="java" name="UtiliserLesAccesseurs" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Le nom d’une collection doit toujours être au pluriel."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Il est recommandé de respecter le principe d’encapsulation de données. Cette techniqueconsiste à cacher les données à l’intérieur de la classe et de ne les rendre accessibles qu’autravers de méthodes, ou accesseurs.&lt;/p&gt;&lt;p&gt;Comme mentionné ci dessus, les accesseurs permettent de gérer la visibilité des attributs.Leur nommage est codifié par le standard Javabeans :Un getter a pour nom get + le nom de l’attribut correspondant (avec la première lettre enmajuscule).&lt;/p&gt;&lt;p&gt;Un setter a pour nom set + le nom de l’attribut correspondant (avec la première lettre enmajuscule).&lt;/p&gt;&lt;ul&gt;	&lt;li&gt;taille =&gt; setTaille() ;&lt;/li&gt;	&lt;li&gt;nomFichier =&gt; setNomFichier() ;&lt;/li&gt;&lt;/ul&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    //FieldDeclaration/VariableDeclarator/VariableDeclaratorId[	(../../FieldDeclaration[@Private = 'true'])	and (	(count (//MethodDeclarator[lower-case(@Image) = lower-case(concat('set',@Image))]) = 0) 	or	(count(//MethodDeclarator[lower-case(@Image) = lower-case(concat('get',@Image))] ) = 0) )]                                    </value>
+			</property>
+		</properties>
+		<example>        	// Quelques exemples de 'getters'private int taille;public int getTaille() {	return taille;}private String nomFichier;public String getNomFichier() {	return nomFichier}			        </example>
+		<example>        	// Le cas particulier des booleans.// Si un attribut est de type boolean, // le getter doit commencer par is au lieu de get.private boolean disponible;public boolean isDisponible() {	return disponible;}        	        </example>
+		<example>        	// Exemple complet :public class Vehicule {    private String marque;   public String getMarque() {      return marque;   }   public void setMarque(String in_marque) {      marque = in_marque;   }}       	        	        </example>
+	</rule>
+	<rule language="java" name="PasDePrefixDeChamps" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Il ne faut pas préfixer les champs par '_'."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Il ne faut pas préfixer les champs par '_'. Cette convention, héritée du langage C++, n'apporteaujourd'hui que peu, en terme de lisibilité, sachant que la plupart des environements de développementintégré proposent une coloration syntaxique automatique pour distinguer ces champs.&lt;/p&gt;&lt;p&gt;Dans ce contexte, l'utilisation de prefixes pour distinguer les champs nuit à la lisibilité du code, sans apporter de réelles plus values.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    //FieldDeclaration/VariableDeclarator/VariableDeclaratorId[	starts-with(@Image,'_')]                                    </value>
+			</property>
+		</properties>
+		<example>        	// Contre exempleprivate String _nom;			        </example>
+	</rule>
+	<rule language="java" name="FavoriserLEncapsulation" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Dans la déclaration des champs d’une classe, on devrait favoriser la visibilité private, protected." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Il est nécessaire d’indiquer lors de la déclaration d’un champ (propriété ou méthode) savisibilité vis à vis de l’extérieur via les mots clés protected, private ou en laissant faire lesystème (default).&lt;/p&gt;&lt;p&gt;Le tableau et les règles présentés ci-dessous sont tirés du livre « Java in a Nutshell » deDavid Flanagan :&lt;/p&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;default&lt;/th&gt;&lt;th&gt;protected&lt;/th&gt;&lt;th&gt;private&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Accessible par des non sous-classes du même paquetage ?&lt;/td&gt;&lt;td&gt;Oui&lt;/td&gt;&lt;td&gt;Oui&lt;/td&gt;&lt;td&gt;Non&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Accessible par des sous-classes du même paquetage ?&lt;/td&gt;&lt;td&gt;Oui&lt;/td&gt;&lt;td&gt;Oui&lt;/td&gt;&lt;td&gt;Non&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Accessible par des non sous-classes d’un paquetage différent ?&lt;/td&gt;&lt;td&gt;Non&lt;/td&gt;&lt;td&gt;Oui&lt;/td&gt;&lt;td&gt;Non&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Accessible par des sous-classes d’un paquetage différent ?&lt;/td&gt;&lt;td&gt;Non&lt;/td&gt;&lt;td&gt;Oui&lt;/td&gt;&lt;td&gt;Non&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Hérité par des sous-classes du même paquetage ?&lt;/td&gt;&lt;td&gt;Oui&lt;/td&gt;&lt;td&gt;Oui&lt;/td&gt;&lt;td&gt;Non&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Hérité par des sous-classes d’un paquetage différent ?&lt;/td&gt;&lt;td&gt;Non&lt;/td&gt;&lt;td&gt;Oui&lt;/td&gt;&lt;td&gt;Non&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;Quelques règles pour aider à choisir le type de visibilité :&lt;/p&gt;	&lt;ol&gt;        &lt;li&gt;Utilisez private pour les propriétés et méthodes qui ne sont utilisées qu’à                  l’intérieur de la classe et qui ne doivent pas être visibles depuis un autre                  endroit.&lt;/li&gt;        &lt;li&gt;Utilisez public pour les méthodes, constantes ou propriétés devant être                  publiées.&lt;/li&gt;     	&lt;li&gt;Utilisez protected pour les variables qui ne sont pas nécessaires pour         l’utilisation de la classe mais qui pourraient se révéler utiles aux personnes         souhaitant l’étendre. Ces variables seront également visibles depuis le code du         paquetage.&lt;/li&gt;     	&lt;li&gt;Utilisez la visibilité par défaut pour les propriétés ou méthodes que vous voulez         cacher aux classes situées à l’extérieur du paquetage, tout en laissant         accessibles à des classes coopérantes du même paquetage. Utilisez protected         si vous voulez également les rendre visibles aux sous-classes situées à l’extérieur du paquetage.&lt;/li&gt;    	&lt;li&gt;Utilisez la directive package pour regrouper vos classes dans les paquetages concernés.&lt;/li&gt;	&lt;/ol&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                                        //ClassOrInterfaceBodyDeclaration[@Label = 'TODO']		  			                </value>
+			</property>
+		</properties>
+		<example>        	// Contre exemplepackage vehicule;public class Vehicule {	private String marque;	private int puissanceFiscale;	public String getMarque() {		return marque;  	}			public void setMarque(String in_marque) {		marque = in_marque;	}}			        </example>
+	</rule>
+	<rule language="java" name="AtLeastOneConstructor" since="1.0" ref="rulesets/java/controversial.xml/AtLeastOneConstructor" message="Définir au moins un constructeur."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Il est fortement recommandé de définir explicitement au moins un constructeur pour chaque classe Java, plutôtque de s'appuyer sur le constructeur fourni par défaut par le compilateur (le constructeur sans paramètre). &lt;/p&gt;&lt;p&gt;Il estmême parfois préférable de baisser le niveau d'accessibilité du constructeur pour prévenir toute instanciationinopportune.&lt;/p&gt; </description>
+		<priority>1</priority>
+	</rule>
+	<rule language="java" name="UseUtilityClass" since="1.0" ref="rulesets/java/design.xml/UseUtilityClass"
+		message="Les classes d'utilitaire ne devrait pas proposer de constructeurs publiques." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Une classe qui ne contient que des méthodes statiques (souvent dénommée utilitaire) nedoit pas avoir de constructeur public. La classe utilitaire doit posséder un constructeurprivé (ou protected) pour empêcher son instanciation.&lt;/p&gt;&lt;p&gt;On peut également noter que si une classe utilitaire est parfois candidate à unrefactoring sous forme de singleton, il faudra alors veiller à respecter les règles sur lessingletons.&lt;/p&gt; </description>
+		<priority>1</priority>
+	</rule>
+	<rule language="java" name="JavadocMethod" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Les méthodes doivent être documentées au format Javadoc."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les classes et méthodes doivent être documentées au format Javadoc.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="JavadocType" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Les classes doivent être documentées au format Javadoc."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les classes et méthodes doivent être documentées au format Javadoc.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="SautDeLigneAvantCommentaire" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Un saut de ligne devrait être mis avant une ligne de commentaire." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Un saut de ligne devrait être mis avant une ligne de commentaire.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="TrailingComment" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Le commentaire doit être mis avant instruction ou sur la même ligne (affectation par exemple)." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Le commentaire doit être mis avant instruction ou sur la même ligne (affectation par exemple).&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="CommentaireAvantDeclaration" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Pour une classe, une interface ou un champ, le commentaire associé doit apparaître juste avant la déclaration." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Pour une classe, une interface ou un champ, le commentaire associé doit apparaître juste avant la déclaration.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="JavadocStyle" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Pour une méthode, en plus de la description, les paramètres (@param), les valeurs retournées (@return) et les exceptions (@exception) doivent être documentés."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Pour une méthode, en plus de la description, les paramètres (@param), les valeurs retournées (@return) et les exceptions (@exception) doivent être documentés.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="TodoComment" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Le marqueur TODO peut être utilisé pour marquer une classe, une méthode ou un algorithme qui n'est pas encore terminé."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Le marqueur TODO peut être utilisé pour marquer une classe, uneméthode ou un algorithme qui n’est pas encore terminé.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="CommentaireOptimize" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Le marqueur OPTIMIZE peut être utilisé pour marquer une méthode ou un algorithme qui fonctionne mais nécessite une optimisation."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Le marqueur OPTIMIZE peut être utilisé pour marquer une méthode ou un algorithme qui fonctionne mais nécessite une optimisation.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="CommentaireWorkaround" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Le marqueur WORKAROUND peut être utilisé pour marquer une méthode ou un algorithme qui nécessite d’être retravaillé."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;le marqueur WORKAROUND peut être utilisé pour marquer uneméthode ou un algorithme qui nécessite d’être retravaillé.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="ReplaceVectorWithList" ref="rulesets/java/migrating.xml/ReplaceVectorWithList" since="1.0"
+		message="Retourner un interface (List,Map) plutôt qu'une implémentation" externalInfoUrl="http://RMC-forge/TODO">
+		<description>			&lt;p&gt;Retourner java.util.List au lieu de java.util.Vector.&lt;/p&gt; </description>
+	</rule>
+	<rule language="java" name="ReplaceHashtableWithMap" ref="rulesets/java/migrating.xml/ReplaceHashtableWithMap" since="1.0"
+		message="Retourner un interface (List,Map) plutôt qu'une implémentation" externalInfoUrl="http://RMC-forge/TODO">
+		<description>			&lt;p&gt;Retourner java.util.Map au lieu de java.util.Hashtable.&lt;/p&gt; </description>
+	</rule>
+	<rule language="java" name="UtiliserLesBouclesForPourLeParcoursDesCollections" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Pour parcourir une collection, il faut utiliser une boucle for Java 5 et non un itérateur." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Lorsque l’on parcourt une collection, il faut utiliser une boucle for Java 5 et non un itérateur, comme en java 4.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    //ClassOrInterfaceBodyDeclaration[@Label = 'TODO']                                    </value>
+			</property>
+		</properties>
+		<example>        	// Contre exemplepublic class Foo {	pubic void m(List liste) {		Iterator iterator = liste.iterator();		while ( iterator.hasNext() ) {			String string = (String)iterator.next();			...		}			}}        	        </example>
+		<example>        	// Exemplepublic class Foo {	pubic void m(List&lt;String&gt; liste) {		for ( String str : liste ) {			...		}		}}        	        </example>
+	</rule>
+	<rule language="java" name="UneCollectionDoitEtreType" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Pour parcourir une collection, il faut utiliser une boucle for Java 5 et non un itérateur." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Lors de la déclaration d'une collection, on doit la typer. Ceci à pour but de faire abstraction des types de données et d'éliminer la conversion explicite.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    //Type[(	(../../FieldDeclaration)	or	(../../LocalVariableDeclaration))and(	(./ReferenceType[			( typeof(@Image, 'java.util.List','List') )			or ( typeof(@Image,'java.util.Collection','Collection') )			or ( typeof(@Image,'java.util.Map','Map') )				or ( typeof(@Image,'java.util.Queue','Queue') )						or ( typeof(@Image,'java.util.Set','Set') )			or ( typeof(@Image,'java.util.SortedSet','SortedSet') )			or ( typeof(@Image,'java.util.SortedMap','SortedMap') )				or ( typeof(@Image,'java.util.HashSet','HashSet') )				or ( typeof(@Image,'java.util.TreeSet','TreeSet') )				or ( typeof(@Image,'java.util.LinkedHashSet','LinkedHashSet') )							or ( typeof(@Image,'java.util.ArrayList','ArrayList') )			or ( typeof(@Image,'java.util.LinkedList','LinkedList') )			or ( typeof(@Image,'java.util.HashMap','HashMap') )			or ( typeof(@Image,'java.util.TreeMap','TreeMap') )			or ( typeof(@Image,'java.util.LinkedHashMap','LinkedHashMap') )						or ( typeof(@Image,'java.util.LinkedBlockingQueue','LinkedBlockingQueue') )			or ( typeof(@Image,'java.util.ArrayBlockingQueue','ArrayBlockingQueue') )			or ( typeof(@Image,'java.util.PriorityBlockingQueue','PriorityBlockingQueue') )			or ( typeof(@Image,'java.util.DelayQueue','DelayQueue') )			or ( typeof(@Image,'java.util.SynchronousQueue','SynchronousQueue') )				])	and	(		count(./ReferenceType/ClassOrInterfaceType/*) = 0)	)]                                    </value>
+			</property>
+		</properties>
+		<example>        	// Contre exemplepublic class Foo {	pubic void m(List liste) {		Iterator iterator = liste.iterator();		while ( iterator.hasNext() ) {			String string = (String)iterator.next();			...		}			}}        	        </example>
+		<example>        	import java.util.List;import java.util.Map;public class Foo {		// bateaux est typé 	private Map&lt;Bateau&gt; bateaux;	// 'moto' n'est pas typé, c'est une infraction	private List moto;	public void bar() {		// 'Voitures' est typé, c'est valide.		List&lt;Voiture&gt; voitures;	}}        	        </example>
+	</rule>
+	<rule language="java" name="ConventionDeNommageDesVariables" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Le nom des variables doivent respecter les conventions d'usage en Java." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;La première lettre de chaque mot d’une variable doit être en minuscule.&lt;/p&gt;&lt;p&gt;Les mots internes d’une variable doivent commencer par une majuscule.&lt;/p&gt;&lt;p&gt;Le nom d’une variable ne doit pas avoir de caractères accentués.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="UneDeclarationParLigne" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Il ne doit y avoir une déclaration par ligne."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Il ne doit y avoir une déclaration par ligne, en effet, cela facilite la documentation des déclarations.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    //LocalVariableDeclaration[count(VariableDeclarator) &gt; 1]                                    </value>
+			</property>
+		</properties>
+		<example>        	String prenom ; 	String nom ; 	String age ; 	        	        </example>
+		<example>        	// Contre-exemples :String prenom, nom, age ;        	        </example>
+	</rule>
+	<rule language="java" name="PasDeTypesDifferentsSurMemeLigne" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule" message="Il ne doit y avoir une déclaration par ligne."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Des types différents ne doivent pas être déclarés sur une même ligne.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    //MethodDeclaration[	count(		(./descendant::LocalVariableDeclaration[			@BeginLine = (./following::LocalVariableDeclaration/@BeginLine)			])	)	&gt; 0]                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="NullAssignment" since="1.0" ref="rulesets/java/controversial.xml/NullAssignment" message="Dé-référencement des objets, à part initialisation, est déconseillé.."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les fuites mémoires des langages à ramasse-miettes sont insidieuses. Si un objet estmal-intentionnellement retenu, non seulement cet objet est exclu du ramassage demiettes, mais tous les objets qu'il référence le sont aussi. Ainsi même si peu deréférences d'objets sont malencontreusement retenus, nombreux peuvent être les objetsqui resteront encombrer la mémoire et détériorer les performances.&lt;/p&gt;&lt;p&gt;Une des façons de résoudre rapidement ce problème est de mettre les références desobjets à null quand ils deviennent obsolètes. Cependant, on constate alors souvent unecertaine propension à le surfaire, ce qui peut réduire la lisibilité, la maintenabilité, etmême la performance du code à terme.&lt;/p&gt;&lt;p&gt;Ainsi, mettre les références des objets à null devrait rester une exception plutôt que larègle. La meilleure façon d'éliminer une référence obsolète est de réutiliser/recycler lavariable dans laquelle elle était contenue, ou de la laisser tomber en dehors dupérimètre. Cela se fera donc naturellement s'il on a pris soin de définir chaque variabledans le plus petit périmètre possible. On rappelle en effet que les implémentationsmodernes de JVM ont un mécanisme de ramasse-miettes hautement optimisé.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<example>        	// Contre exemplepublic class Foo {   public void bar() {     // Initialisation de la variables     Object x = null;      x = new Object();     // Execution de code     ...     // Fin des opérations          // On déférence l'objet     x = null;            // On continue...   } }        	        </example>
+	</rule>
+	<rule language="java" name="VariablesGlobalesInterdites" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Les propriétés publiques, sauf constantes, sont interdites." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les variables globales, sauf constantes, sont interdites. En effet,il ne faut pas déclarer de membres d'instances  sans raison valable et sans volonté de vouloir intentionnellement exposer une API.&lt;/p&gt;&lt;p&gt;La caractéristique la plus importante qui distingue un module debonne facture d'un module de qualité médiocre réside dans sacapacité à cacher ces données et implémentations internes et à lesséparer de façon propre de son API.&lt;/p&gt;&lt;p&gt;Il faut rendre chaque classe et chaque membre aussi inaccessibles que possible (cf. item 12 de Effective Java 19).&lt;/p&gt;&lt;p&gt;De plus, une fois une propriété exposée, elle ne peut être simplementréfactoré, car les applications clientes, peuvent s'en servir, à l'insu du développeur.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    //FieldDeclaration[	(@Static= 'false')	and	(@Final = 'false')	and	(@Public = 'true') ]                                    </value>
+			</property>
+		</properties>
+		<example>        	//contre exemplepublic class Foo{	public String bar;}        	        </example>
+	</rule>
+	<rule language="java" name="VariableNamingConventions" since="1.0" ref="rulesets/java/naming.xml/VariableNamingConventions"
+		message="Le nom d’une constante doit être en majuscule et chaque mot interne à une constante est séparé par un underscore."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Le nom d’une constante doit être en majuscule. Chaque mot interne à une constante est séparé par un underscore.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<example>        	static final int TAILLE_MAX = 4;static final int TAILLE_MIN = 2;// Contre exemplestatic final int tailleMax = 3;        	        </example>
+	</rule>
+	<rule language="java" name="NePasIndiquerLeTypeDansLeNomDesVariables" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Il est inutile d''ajouter le type d'une variable dans son nom." externalInfoUrl="TODO">
+		<description>		&lt;p&gt;Le Java est un langage fortement typé, ajouter le type d'une variable n'apportedonc qu'une information redondante pour le relecteur.&lt;/p&gt;&lt;p&gt;Les paramètres avec une sémantique fonctionnelle doivent être nommés explicitement.On ne doit pas utiliser par exemple in_string, in_integer.&lt;/p&gt; </description>
+		<properties>
+			<property name="xpath">
+				<value>				 //VariableDeclaratorId[@Label = 'TODO']			 				 	</value>
+			</property>
+		</properties>
+		<priority>1</priority>
+		<example>			//Contre examplepublic class Foo {	private UneEntite uneEntiteVariable;	private int intVariablePrimitive;		public void method(String in_string,				int intAge) {		..	}}					</example>
+	</rule>
+	<rule language="java" name="NomDesVariablesDException" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Les noms des variables exceptions devraient être composés de la première lettre de chaque mot composant le nom de la classe d’exception."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les noms des variables exceptions devraient être composés de la première lettre de chaque mot composant le nom de la classe d’exception.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    			//ClassOrInterfaceBodyDeclaration[@Label = 'TODO']                                    </value>
+			</property>
+		</properties>
+		<example>        	try {...} catch (IOException ioe) {   // Gère un objet exception   // de type java.io.IOException}        		        	        </example>
+	</rule>
+	<rule language="java" name="SuffixException" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Le nom d’une classe d’exception doit être suffixé par le mot clé Exception. Exemple : ClassNotFoundException, ApplicationException,..."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Le nom d’une classe d’exception doit être suffixé par le mot clé Exception. Exemple : ClassNotFoundException, ApplicationException,...&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    //ClassOrInterfaceDeclaration[    not (ends-with(@Image,"Exception") )    and    (    (./ExtendsList/ClassOrInterfaceType[contains(@Image,"Exception")])    or    (./ImplementsList/ClassOrInterfaceType[contains(@Image,"Throwable")])    )]                                    </value>
+			</property>
+		</properties>
+		<example>        	public class DonneesInvalideException {}        	        </example>
+	</rule>
+	<rule language="java" name="SuffixError" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Le nom d’une classe d’erreur doit être suffixé par le mot clé “Error”. Exemple : RuntimeError,..." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Le nom d’une classe d’erreur doit être suffixé par le mot clé “Error”. Exemple : RuntimeError,...&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    //ClassOrInterfaceDeclaration[    not (ends-with(@Image,"Error") )    and    (./ExtendsList/ClassOrInterfaceType[contains(@Image,"Error")])]                                    </value>
+			</property>
+		</properties>
+		<example>        	public class DonneesInvalideException {}        	        </example>
+	</rule>
+	<rule language="java" name="NePasHeriterDeThrowable" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Hériter de Error ou Exception, pour clairement définir la nature de l'exception remontée." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Hériter de Error ou de Exception, pour clairement définir la nature de l'exception remontée. Hériter de Throwable ne permet pas de qualifier si le problème rencontré est une erreur ou une exception.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    //ClassOrInterfaceDeclaration[    (./ExtendsList/ClassOrInterfaceType[ends-with(@Image,"Throwable")])]                                    </value>
+			</property>
+		</properties>
+		<example>        	// Contre exemplepublic class DonneesInvalideException extends Throwable {}        	        </example>
+	</rule>
+	<rule language="java" name="TesterToutDiviseur" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Pour éviter le problème de la division par 0, le diviseur doit être testé." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Pour éviter le problème de la division par 0, le diviseur doit être testé.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>                    //ClassOrInterfaceBodyDeclaration[@Label = 'TODO']                                    </value>
+			</property>
+		</properties>
+		<example>        	// Les différents cas possibles de division par 0 sont :6/0         // Lève une ArithmeticException6/0.0d        // Renvoie +80.0d/0.0d       // Renvoie NaN (Not A Number)//Afin de traiter proprement tous les cas possibles :if(diviseur != 0) {    //traitement} else {   //gestion de l’exception}        	        </example>
+	</rule>
+	<rule language="java" name="CloseResource" ref="rulesets/java/design.xml/CloseResource" since="1.0"
+		message="Les ressources créées ou ouvertes dans le corps de la méthode doivent être désallouées dans une clause finally, pour rester dans un état cohérent."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>        	&lt;p&gt;Les ressources créées ou ouvertes dans le corps de la méthode doivent être désallouées dans une clause finally, pour rester dans un état cohérent&lt;/p&gt; </description>
+		<priority>1</priority>
+		<example>			public class Foo {	void bar() {  		Connection c = pool.getConnection();  		try {  			...  		} catch (Exception e) {  		} finally {		   c.close();  		} }}					</example>
+	</rule>
+	<rule language="java" name="PreserveStackTrace" ref="rulesets/java/design.xml/PreserveStackTrace" since="1.0" message="Préserver la stacktrace."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>			&lt;p&gt;Générer une exception depuis un bloc catch sans passer la première exception à lanouvelle exception entraîne la perte de la stacktrace, ce qui pourra poser des problèmeslors du débuggage de l'application.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<example>			// Contre exempletry{    facture.calcul(client, date);}catch(ProfilClientInconnuException e){    throw new CompteClientInconnuException(e.getMessage());}					</example>
+		<example>			// Exampletry{     facture.calcul(client, date);}catch(ProfilClientInconnuException e){    throw new CptClientInconnuException(e.getMessage(),e);}								</example>
+	</rule>
+	<rule language="java" name="AvoidPrintStackTrace" ref="rulesets/java/logging-java.xml/AvoidPrintStackTrace" since="1.0"
+		message="Il est préférable d''utiliser un outil de journalisation (logging) plutôt que d''imprimer la stacktrace." externalInfoUrl="http://RMC-forge/TODO">
+		<description>			&lt;p&gt;Il est préférable d'utiliser un outil de journalisation (logging) plutôt que d'imprimer la stacktrace.&lt;/p&gt; </description>
+	</rule>
+	<rule language="java" name="MethodNamingConventions" since="1.0" ref="rulesets/java/naming.xml/MethodNamingConventions" message="Les noms de méthodes doivent être des verbes."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;La première lettre est en minuscule, les premières lettres des mots d’un nom composé sont en majuscules.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<example>			run(), initialize(), loadClass()					</example>
+	</rule>
+	<rule language="java" name="NePasPrefixerLesParametres" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Ne pas préfixer par in,out, et inOut les paramètres des méthodes." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les préfixes de ce type nuisent à la visiblité du code, pour une faible information en retour.Il est préférable de renseigner correctement les commentaires Javadoc pour décrire quelparamètre est modifié ou non.&lt;/p&gt;&lt;p&gt;&lt;em&gt;Remarque : nommer seulement les variables "in", "out", "outIn" ou "inOut" forment aussiune infraction à cette règle.&lt;/em&gt;&lt;/p&gt; </description>
+		<properties>
+			<property name="xpath">
+				<value>        		//MethodDeclaration/MethodDeclarator/FormalParameters/FormalParameter/VariableDeclaratorId[	starts-with(@Image,"inOut")	or	starts-with(@Image,"outIn")]        		        		</value>
+			</property>
+		</properties>
+		<priority>1</priority>
+		<example>			// Contre examplepublic class Exemple extends Object {  public void maMethode(      int in_operande1,      int out_operande2,      StringBuffer inout_resultat) {      out_operande2 = in_operande1 *       		in_operande1;      inout_resultat.append("Le résultat est " +       		out_operande2);  }}					</example>
+	</rule>
+	<rule language="java" name="NePasIndiquerLeTypeDansLeNomDesMethodes" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Il est inutile d'ajouter le type d'une variable dans son nom." externalInfoUrl="TODO">
+		<description>		&lt;p&gt;Le Java est un langage fortement typé, ajouter le type de retour d'une méthode n'apportedonc qu'une information redondante pour le relecteur.&lt;/p&gt; </description>
+		<properties>
+			<property name="xpath">
+				<value>				 //MethodDeclaration/MethodDeclarator[@Label = 'TODO']			 				 	</value>
+			</property>
+		</properties>
+		<priority>1</priority>
+		<example>			//Contre examplepublic class Foo {		private int intMethod() {		return 0;	}		public void voidMethod() {	}}					</example>
+	</rule>
+	<rule language="java" name="ExcessiveParameterList" since="1.0" ref="rulesets/java/codesize.xml/ExcessiveParameterList" message="Les noms de méthodes doivent être des verbes."
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Le nombre de paramètres d’une méthode doit être limité à 6.Une méthode doit avoir au maximum 6 paramètres. Au delà, il faut est généralementpertinent de créer une classe conteneur pour regrouper l'ensemble desparamètres.&lt;/p&gt;&lt;p&gt;Ce technique présente aussi l'avantage, d'offrir une signature plus claireet permet d'ajouter de nouveau paramètre (soit de nouveau champs dans laclasse), sans altérer la signature.&lt;/p&gt;&lt;p&gt;(Pour plus de détail, consulter le livre de Rod Johnson - Expert One-on-One J2EE Design and Development)&lt;/p&gt;&lt;p&gt;A l'inverse, l'utilisation de List ou de Map, à la place, est prohibé. Ce genrede pratique aboutit à des signatures peu claires et faiblement typées.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<example>			// Contre exemplepublic void connexion(	String database, String hostname, 						String username,String password,						Query query, int timeOut) { }										</example>
+		<example>			// Contre Exemplepublic void connexion(	String database, String hostname, 						String username,String password,						Query query, int timeOut) { }										</example>
+		<example>			// Exemplepublic void connexion(Connection connection) { }					public class Connection {	private String database;	private String hostname;	private String username;	private String password;	private Query query;	private int timeOut;		// ... et les getters/setters appropriés}					</example>
+	</rule>
+	<rule language="java" name="SautDeLigneApresMethodeDeclaration" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Le nom des variables doivent respecter les conventions d'usage en Java." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Un saut de ligne doit être mis avant chaque déclaration de méthode.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="DeclarationOrder" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Les méthodes « public » devraient être déclarées en premier, puis les méthodes « protected » et « private »." externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Les méthodes « public » devraient être déclarées en premier, puis les méthodes « protected » et « private ».&lt;/p&gt;²                    </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<!--  Cette syntaxe XPath ne correspond à rien et est utiliser pour                		  dans le cas où la règle est contrôlé par un autre outil                 		  que PMD.                		  Convention: indiquer l'outil dans le @Label = ""                		  Outil possible :                		  * javac, le compilateur java                		  * checkstyle,                		  * eclipse                	 -->                                            //ClassOrInterfaceBodyDeclaration[@Label = 'checkstyle']                                    </value>
+			</property>
+		</properties>
+	</rule>
+	<rule language="java" name="RMCPackageNaming" since="1.0" class="net.sourceforge.pmd.lang.rule.XPathRule"
+		message="Le nommage suivant doit être utilisé pour les applications fr.gouv.education.RMC.domaine_applicatif.application.module_applicatif.couche_applicative.nom_package"
+		externalInfoUrl="http://RMC-forge/TODO">
+		<description>            &lt;p&gt;Le nommage suivant doit être utilisé pour les applications &lt;em&gt;fr.gouv.education.RMC.domaine_applicatif.application.module_applicatif.couche_applicative.nom_package&lt;/em&gt;.&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>//PackageDeclaration/Name[not(starts-with(@Image,'fr.gouv.education.RMC.') )]</value>
+			</property>
+		</properties>
+		<example>                package com.rmc;public class Foo {}            			</example>
+	</rule>
+	<rule language="java" name="PackageNaming" since="1.0"
+		message="Les noms de packages doivent être en minuscules, sans caractère accentué et sans caractère étendu (’$’,’-’,’#’ ...)." class="net.sourceforge.pmd.lang.rule.XPathRule"
+		externalInfoUrl="TODO">
+		<description>			&lt;p&gt;Les noms de packages doivent être en minuscules, sans caractère accentué et sans caractère étendu (’$’,’-’,’#’ ...)&lt;/p&gt; </description>
+		<priority>1</priority>
+		<properties>
+			<property name="xpath">
+				<value>//PackageDeclaration/Name[(contains(@Image,'é')	or	contains(@Image,'$')	or	contains(@Image,'è')	or	contains(@Image,'$')	or	contains(@Image,'’')	or	contains(@Image,'-')	or	contains(@Image,'#')]		</value>
+			</property>
+		</properties>
+		<example>    package fr.MonProjet.#monmodule;  	public class SomeClass {}    		</example>
+	</rule>
+	<rule language="jsp" name="NoScriptlets" ref="rulesets/jsp/basic.xml/NoScriptlets" since="1.0"
+		message="Les pages JSP doivent uniquement servir à afficher de la donnée. Par conséquent l'utilisation de scriptlet est interdit."
+		externalInfoUrl="TODO">
+		<description>			&lt;p&gt;Les pages JSP doivent uniquement servir à afficher de la donnée. On ne devrait mettre que de l’affichage dans les JSP avec des request.getAttribute() pour afficher des informations préalablement préparées par le contrôleur (L’information peut être une liste ou une entité). Par conséquent l'utilisation de scriptlet est interdit.&lt;/p&gt; </description>
+		<priority>1</priority>
+	</rule>
+	<rule language="java" name="ToujoursUtiliserPostPourLesFormulaires" class="net.sourceforge.pmd.lang.rule.XPathRule" since="1.0"
+		message="Les paramètres devraient être passés en POST par le formulaire." externalInfoUrl="TODO">
+		<description>			&lt;p&gt;Les paramètres devraient être passés en POST par le formulaire.&lt;/p&gt;&lt;p&gt;Il est recommandé de passer les paramètres d’un formulaire en POST, ce qui évite que lesparamètres soient visibles de l’URL. De même, certains firewall tronquent les requêtes httpafin de prévenir d’un « buffer overflow ».&lt;/p&gt; </description>
+		<priority>1</priority>
+		<example>			&lt;form 	method="post" 	action="monAction"&gt;	...&lt;/form&gt; </example>
+		<properties>
+			<property name="xpath">
+				<value>                                        //ClassOrInterfaceBodyDeclaration[@Label = 'TODO']		    		                </value>
+			</property>
+		</properties>
+	</rule>
+</ruleset>
