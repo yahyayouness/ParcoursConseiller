@@ -15,8 +15,6 @@
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 
-
-	
 	<import resource="classpath:applicationContexteConfig.xml" />
 	<import resource="classpath:applicationContextCommun.xml" />
 	<import resource="classpath:applicationContextClientWs.xml" />
@@ -66,15 +64,6 @@
 		</jaxrs:providers>
 	</jaxrs:server>
 
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix">
-			<value>/WEB-INF/views/jsp/</value>
-		</property>
-		<property name="suffix">
-			<value>.jsp</value>
-		</property>
-	</bean>
 
 
 </beans>

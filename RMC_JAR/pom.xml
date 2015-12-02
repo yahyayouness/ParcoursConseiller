@@ -5,6 +5,7 @@
 		<groupId>com.edf.rmc.pom</groupId>
 		<artifactId>RMC_SuperPOM</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../RMC_SuperPOM/pom.xml</relativePath>
 	</parent>
 	<groupId>com.edf.rmc.jar</groupId>
 	<artifactId>RMC_JAR</artifactId>
@@ -14,7 +15,7 @@
 <!-- 	Ajouter les dependences communes au jar -->
 
 	<modules>
-		<module>../RMC_Client_WS</module>
+<!-- 		<module>../RMC_Client_WS</module> -->
 		<module>../RMC_DAO</module>
 	</modules>
 </project>

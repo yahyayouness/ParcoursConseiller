@@ -5,10 +5,12 @@
 		<groupId>com.edf.rmc.pom</groupId>
 		<artifactId>RMC_SuperPOM</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../RMC_SuperPOM/pom.xml</relativePath>
 	</parent>
 	<groupId>com.edf.rmc.ear</groupId>
 	<artifactId>RMC_EAR</artifactId>
 	<packaging>pom</packaging>
+	
 	<name>RMC_EAR</name>
 	<description>Projet qui regroupe les EAR du projet</description>
 	
@@ -20,9 +22,10 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-ear-plugin</artifactId>
-				<configuration>
-					<defaultJavaBundleDir>lib/</defaultJavaBundleDir>
-				</configuration>
+<!-- 				<configuration> -->
+<!-- 					<defaultJavaBundleDir>lib/</defaultJavaBundleDir> -->
+<!-- 					<skinnyWars>true</skinnyWars> -->
+<!-- 				</configuration> -->
 			</plugin>
 		</plugins>
 	</build>

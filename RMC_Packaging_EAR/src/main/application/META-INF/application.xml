@@ -3,20 +3,18 @@
 	"-//Sun Microsystems, Inc.//DTD J2EE Application 1.3//EN"
 	"http://java.sun.com/dtd/application_1_3.dtd">
 <application>
-	<display-name>RMC_Packaging_EAR</display-name>
-	<description>Super POM du projet Parcours Conseiller (Refonte et mise
-		en service)</description>
-	<module>
-		<web>
-			<web-uri>RMC_Authentification.war</web-uri>
-			<context-root>RMC_Authentification</context-root>
-		</web>
-	</module>
-
-	<module>
-		<web>
-			<web-uri>RMC_WS.war</web-uri>
-			<context-root>RMC_WS</context-root>
-		</web>
-	</module>
+  <display-name>RMC_Packaging_EAR</display-name>
+  <description>Projet qui regroupe les EAR du projet</description>
+  <module>
+    <web>
+      <web-uri>RMC_Authentification-0.0.1-SNAPSHOT.war</web-uri>
+      <context-root>RMC_Authentification</context-root>
+    </web>
+  </module>
+  <module>
+    <web>
+      <web-uri>RMC_WS-0.0.1-SNAPSHOT.war</web-uri>
+      <context-root>RMC_WS</context-root>
+    </web>
+  </module>
 </application>

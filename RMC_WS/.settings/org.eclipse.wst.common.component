@@ -19,5 +19,6 @@
         </dependent-module>
         <property name="context-root" value="RMC_WS"/>
         <property name="java-output-path" value="/RMC_WS/target/classes"/>
+        <property name="component.exclusion.patterns"/>
     </wb-module>
 </project-modules>

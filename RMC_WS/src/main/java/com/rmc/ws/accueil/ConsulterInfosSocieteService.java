@@ -54,7 +54,8 @@ public class ConsulterInfosSocieteService {
 			final @PathParam(value = "num") String siret)
 			throws ServletException, SiretNotValidException {
 
-		String test =config.getEnvironnement();
+		final String test =config.getEnvironnement();
+		
 		if (null == siret || siret.trim().isEmpty()) {
 
 			Object[] params = new Object [] {siret};

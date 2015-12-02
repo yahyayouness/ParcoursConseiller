@@ -5,13 +5,17 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="RMC_Communs-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/RMC_Communs/RMC_Communs">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="RMC_AOP_Logging-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/RMC_AOP_Logging/RMC_AOP_Logging">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="RMC_Communs-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/RMC_Communs/RMC_Communs">
+        <dependent-module archiveName="RMC_Configuration-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/RMC_Configuration/RMC_Configuration">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/RMC_Authentification/target/classes"/>
         <property name="context-root" value="RMC_Authentification"/>
+        <property name="component.exclusion.patterns"/>
     </wb-module>
 </project-modules>

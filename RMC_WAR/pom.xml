@@ -3,17 +3,35 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.edf.rmc.war</groupId>
 	<artifactId>RMC_WAR</artifactId>
-  <packaging>pom</packaging>
-  <name>RMC_WAR</name>
-  
-    <parent>
-  		<groupId>com.edf.rmc.pom</groupId>
-  		<artifactId>RMC_SuperPOM</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</parent>
-  
+	<packaging>pom</packaging>
+	<name>RMC_WAR</name>
+
+	<parent>
+		<groupId>com.edf.rmc.pom</groupId>
+		<artifactId>RMC_SuperPOM</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../RMC_SuperPOM/pom.xml</relativePath>
+	</parent>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+<!-- 					<packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes> -->
+					<webXml>src\main\webapp\WEB-INF\web.xml</webXml>
+<!-- 					<archive> -->
+<!-- 						<manifest> -->
+<!-- 							<addClasspath>true</addClasspath> -->
+<!-- 						</manifest> -->
+<!-- 					</archive> -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<modules>
 		<module>../RMC_Authentification</module>
-		<module>../RMC_</module>
+		<module>../RMC_WS</module>
 	</modules>
 </project>

@@ -15,9 +15,9 @@
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 
-<import resource="classpath:applicationContextCommun.xml" />
+	<import resource="classpath:applicationContexteConfig.xml" />
+	<import resource="classpath:applicationContextCommun.xml" />
 	<import resource="classpath:applicationContextAop.xml" />
-	<import resource="classpath:applicationContextAuth.xml" />
   
 
 <bean id="abstractLoggingInterceptor" abstract="true">
@@ -69,15 +69,6 @@
 		</jaxrs:providers>
 	</jaxrs:server>
 
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix">
-			<value>/WEB-INF/views/jsp/</value>
-		</property>
-		<property name="suffix">
-			<value>.jsp</value>
-		</property>
-	</bean>
 
 
 </beans>

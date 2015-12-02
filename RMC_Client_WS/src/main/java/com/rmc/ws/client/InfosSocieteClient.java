@@ -8,6 +8,8 @@ import fr.edf.psc._0022.consulterinfossociete.RechercheMosaique;
 import fr.edf.psc._0022.consulterinfossociete.RechercheMosaiqueInput;
 import fr.edf.psc._0022.consulterinfossociete.RechercheMosaiqueOutput;
 
+
+
 @Service
 public class InfosSocieteClient {
 

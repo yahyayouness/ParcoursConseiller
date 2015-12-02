@@ -1,0 +1,3 @@
+<classloading xmlns="urn:jboss:classloading:1.0" domain="RMC_WS-0.0.1-SNAPSHOT.war" parent-domain="RMC_Packaging_EAR.ear"
+	export-all="NON_EMPTY" import-all="true" parent-first="true">
+</classloading>

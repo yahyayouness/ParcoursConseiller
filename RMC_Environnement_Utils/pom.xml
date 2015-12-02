@@ -4,6 +4,7 @@
     <groupId>com.edf.rmc.pom</groupId>
     <artifactId>RMC_SuperPOM</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../RMC_SuperPOM/pom.xml</relativePath>
   </parent>
   <artifactId>RMC_Environnement_Utils</artifactId>
   <packaging>pom</packaging>

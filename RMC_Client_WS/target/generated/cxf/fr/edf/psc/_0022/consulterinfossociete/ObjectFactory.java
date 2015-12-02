@@ -24,8 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _RechercheMosaique_QNAME = new QName("http://www.edf.fr/psc/0022/consulterInfosSociete", "rechercheMosaique");
     private final static QName _ConsulterInfosSocieteResponse_QNAME = new QName("http://www.edf.fr/psc/0022/consulterInfosSociete", "consulterInfosSociete_Response");
+    private final static QName _RechercheMosaique_QNAME = new QName("http://www.edf.fr/psc/0022/consulterInfosSociete", "rechercheMosaique");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: fr.edf.psc._0022.consulterinfossociete
@@ -40,62 +40,6 @@ public class ObjectFactory {
      */
     public RechercheMosaiqueOutput createRechercheMosaiqueOutput() {
         return new RechercheMosaiqueOutput();
-    }
-
-    /**
-     * Create an instance of {@link RechercheMosaiqueTopElmt }
-     * 
-     */
-    public RechercheMosaiqueTopElmt createRechercheMosaiqueTopElmt() {
-        return new RechercheMosaiqueTopElmt();
-    }
-
-    /**
-     * Create an instance of {@link RechercheMosaique }
-     * 
-     */
-    public RechercheMosaique createRechercheMosaique() {
-        return new RechercheMosaique();
-    }
-
-    /**
-     * Create an instance of {@link MosaiqueMessageOut }
-     * 
-     */
-    public MosaiqueMessageOut createMosaiqueMessageOut() {
-        return new MosaiqueMessageOut();
-    }
-
-    /**
-     * Create an instance of {@link DonneesRetour }
-     * 
-     */
-    public DonneesRetour createDonneesRetour() {
-        return new DonneesRetour();
-    }
-
-    /**
-     * Create an instance of {@link RechercheMosaiqueInput }
-     * 
-     */
-    public RechercheMosaiqueInput createRechercheMosaiqueInput() {
-        return new RechercheMosaiqueInput();
-    }
-
-    /**
-     * Create an instance of {@link ConsulterInfosSocieteResponseTopElmt }
-     * 
-     */
-    public ConsulterInfosSocieteResponseTopElmt createConsulterInfosSocieteResponseTopElmt() {
-        return new ConsulterInfosSocieteResponseTopElmt();
-    }
-
-    /**
-     * Create an instance of {@link ConsulterInfosSocieteResponse }
-     * 
-     */
-    public ConsulterInfosSocieteResponse createConsulterInfosSocieteResponse() {
-        return new ConsulterInfosSocieteResponse();
     }
 
     /**
@@ -115,19 +59,43 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ConsulterInfosSocieteResponse }
+     * 
+     */
+    public ConsulterInfosSocieteResponse createConsulterInfosSocieteResponse() {
+        return new ConsulterInfosSocieteResponse();
+    }
+
+    /**
+     * Create an instance of {@link RechercheMosaique }
+     * 
+     */
+    public RechercheMosaique createRechercheMosaique() {
+        return new RechercheMosaique();
+    }
+
+    /**
+     * Create an instance of {@link RechercheMosaiqueInput }
+     * 
+     */
+    public RechercheMosaiqueInput createRechercheMosaiqueInput() {
+        return new RechercheMosaiqueInput();
+    }
+
+    /**
+     * Create an instance of {@link ConsulterInfosSocieteResponseTopElmt }
+     * 
+     */
+    public ConsulterInfosSocieteResponseTopElmt createConsulterInfosSocieteResponseTopElmt() {
+        return new ConsulterInfosSocieteResponseTopElmt();
+    }
+
+    /**
      * Create an instance of {@link SCORE }
      * 
      */
     public SCORE createSCORE() {
         return new SCORE();
-    }
-
-    /**
-     * Create an instance of {@link ETABLISSEMENT }
-     * 
-     */
-    public ETABLISSEMENT createETABLISSEMENT() {
-        return new ETABLISSEMENT();
     }
 
     /**
@@ -139,6 +107,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link RechercheMosaiqueTopElmt }
+     * 
+     */
+    public RechercheMosaiqueTopElmt createRechercheMosaiqueTopElmt() {
+        return new RechercheMosaiqueTopElmt();
+    }
+
+    /**
      * Create an instance of {@link CHAMP }
      * 
      */
@@ -147,12 +123,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RechercheMosaique }{@code >}}
+     * Create an instance of {@link ETABLISSEMENT }
      * 
      */
-    @XmlElementDecl(namespace = "http://www.edf.fr/psc/0022/consulterInfosSociete", name = "rechercheMosaique")
-    public JAXBElement<RechercheMosaique> createRechercheMosaique(RechercheMosaique value) {
-        return new JAXBElement<RechercheMosaique>(_RechercheMosaique_QNAME, RechercheMosaique.class, null, value);
+    public ETABLISSEMENT createETABLISSEMENT() {
+        return new ETABLISSEMENT();
+    }
+
+    /**
+     * Create an instance of {@link DonneesRetour }
+     * 
+     */
+    public DonneesRetour createDonneesRetour() {
+        return new DonneesRetour();
+    }
+
+    /**
+     * Create an instance of {@link MosaiqueMessageOut }
+     * 
+     */
+    public MosaiqueMessageOut createMosaiqueMessageOut() {
+        return new MosaiqueMessageOut();
     }
 
     /**
@@ -162,6 +153,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.edf.fr/psc/0022/consulterInfosSociete", name = "consulterInfosSociete_Response")
     public JAXBElement<ConsulterInfosSocieteResponse> createConsulterInfosSocieteResponse(ConsulterInfosSocieteResponse value) {
         return new JAXBElement<ConsulterInfosSocieteResponse>(_ConsulterInfosSocieteResponse_QNAME, ConsulterInfosSocieteResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RechercheMosaique }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.edf.fr/psc/0022/consulterInfosSociete", name = "rechercheMosaique")
+    public JAXBElement<RechercheMosaique> createRechercheMosaique(RechercheMosaique value) {
+        return new JAXBElement<RechercheMosaique>(_RechercheMosaique_QNAME, RechercheMosaique.class, null, value);
     }
 
 }
