@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
-	<deployment>
-		<exclude-subsystems>
-			<subsystem name="logging" />
+<!-- 	<deployment> -->
+<!-- 		<exclude-subsystems> -->
+<!-- 			<subsystem name="logging" /> -->
 			<!-- Exclusion of REST JBoss subsystem -->
-			<subsystem name="jaxrs" />
-		</exclude-subsystems>
+<!-- 			<subsystem name="jaxrs" /> -->
+<!-- 		</exclude-subsystems> -->
 
-		<exclusions>
-			<module name="javaee.api" />
-		</exclusions>
+<!-- 		<exclusions> -->
+<!-- 			<module name="javaee.api" /> -->
+<!-- 		</exclusions> -->
 		
-		<dependencies>
+<!-- 		<dependencies> -->
 <!-- 			<module name="javax.activation.api" export="true" /> -->
 <!-- 			<module name="javax.annotation.api" export="true" /> -->
 <!-- 			<module name="javax.ejb.api" export="true" /> -->
@@ -42,6 +42,6 @@
 <!-- 			<module name="javax.xml.ws.api" export="true" /> -->
 			<!-- This one always goes last. -->
 <!-- 			<module name="javax.api" export="true" /> -->
-		</dependencies>
-	</deployment>
+<!-- 		</dependencies> -->
+<!-- 	</deployment> -->
 </jboss-deployment-structure>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+	<!-- Appender pour la redirection des logs applicatifs vers JBoss (developpement uniquement) -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<Pattern>%level [%-40c] %m%n</Pattern>
+		</encoder>
+	</appender>
+
+	<!-- Appender dedie aux erreurs techniques -->
+	<appender name="TECH_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${jboss.server.log.dir}/rmc_tech.log</file>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>TRACE</level>
+		</filter>
+		<filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+			<evaluator class="ch.qos.logback.classic.boolex.OnMarkerEvaluator">
+				<marker>TECH</marker>
+			</evaluator>
+			<OnMismatch>DENY</OnMismatch>
+			<OnMatch>NEUTRAL</OnMatch>
+		</filter>
+		<encoder>
+			<Pattern>%d %level %thread [%X{ArtifactId}] [%X{Version}] [%X{rmc_idAgent}] [%logger] %m%n</Pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${jboss.server.log.dir}/rmc_tech-%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>168</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<!-- Appender dedie aux erreurs fonctionnelles -->
+	<appender name="FONC_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${jboss.server.log.dir}/rmc_fonc.log</file>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>TRACE</level>
+		</filter>
+		<filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+			<evaluator class="ch.qos.logback.classic.boolex.OnMarkerEvaluator">
+				<marker>FONC</marker>
+			</evaluator>
+			<OnMismatch>DENY</OnMismatch>
+			<OnMatch>NEUTRAL</OnMatch>
+		</filter>
+		<encoder>
+			<Pattern>%d %level %thread [%X{ArtifactId}] [%X{Version}] [%logger] %m%n</Pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${jboss.server.log.dir}/rmc_fonc-%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>168</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<!-- Appender pour le reste des traces -->
+	<appender name="GENERAL_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${jboss.server.log.dir}/rmc.log</file>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>TRACE</level>
+		</filter>
+		<filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+			<evaluator class="ch.qos.logback.classic.boolex.OnMarkerEvaluator">
+				<marker>TECH</marker>
+				<marker>FONC</marker>
+			</evaluator>
+			<OnMismatch>NEUTRAL</OnMismatch>
+			<OnMatch>DENY</OnMatch>
+		</filter>
+		<encoder>
+			<Pattern>%d %level %thread [%X{ArtifactId}] [%X{Version}] [%logger] %m%n</Pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${jboss.server.log.dir}/rmc-%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>168</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<logger name="com.rmc">
+		<level value="INFO" />
+	</logger>
+
+	<root>
+		<level value="WARN" />
+		<appender-ref ref="FONC_APPENDER" />
+		<appender-ref ref="TECH_APPENDER" />
+		<appender-ref ref="GENERAL_APPENDER" />
+		<!-- <appender-ref ref="STDOUT" /> -->
+	</root>
+</configuration>

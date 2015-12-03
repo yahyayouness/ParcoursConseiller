@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
+			by default -->
+		<encoder>
+			<pattern>%d %level %thread [%X{ArtifactId}] [%X{Version}] [%logger]
+				%m%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- ================================= -->
+	<!-- Preserve messages in a local file -->
+	<!-- ================================= -->
+
+	<!-- A time/date based rolling appender -->
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${jboss.server.log.dir}/rmc.log</file>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>DEBUG</level>
+		</filter>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d %level %thread [%X{ArtifactId}] [%X{Version}] [%logger]
+				%m%n</Pattern>
+		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${jboss.server.log.dir}/rmc-%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>168</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+
+	<logger name="org.apache">
+		<level value="WARN" />
+	</logger>
+	<logger name="org.apache">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="jacorb">
+		<level value="WARN" />
+	</logger>
+	<logger name="org.jgroups">
+		<level value="WARN" />
+	</logger>
+	<logger name="org.quartz">
+		<level value="WARN" />
+	</logger>
+	<logger name="com.sun">
+		<level value="WARN" />
+	</logger>
+	<logger name="sun">
+		<level value="WARN" />
+	</logger>
+	<logger name="javax.xml.bind">
+		<level value="WARN" />
+	</logger>
+	<logger name="org.jboss.management">
+		<level value="INFO" />
+	</logger>
+	<logger name="org.rhq">
+		<level value="WARN" />
+	</logger>
+	<logger name="org.jboss.seam">
+		<level value="WARN" />
+	</logger>
+	<logger name="org.mc4j.ems">
+		<level value="WARN" />
+	</logger>
+	<logger name="javax.xml.query">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.jboss.serial">
+		<level value="INFO" />
+	</logger>
+	<logger name="org.springframework">
+		<level value="WARN" />
+	</logger>
+	<logger name="org.hibernate">
+		<level value="WARN" />
+	</logger>
+	<logger name="org.hibernate.SQL">
+		<level value="WARN" />
+	</logger>
+	<logger name="org.apache.catalina.cor">
+		<level value="FATAL" />
+	</logger>
+	<logger name="org.xcerces">
+		<level value="FATAL" />
+	</logger>
+	<logger name="org.jboss">
+		<level value="FATAL" />
+	</logger>
+	<logger name="org.springframework">
+		<level value="WARN" />
+	</logger>
+	<logger name="com.rmc">
+		<appender-ref ref="FILE" />
+	</logger>
+	<root>
+		<level value="WARN" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>

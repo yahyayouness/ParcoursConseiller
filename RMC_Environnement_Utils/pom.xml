@@ -9,4 +9,33 @@
   <artifactId>RMC_Environnement_Utils</artifactId>
   <packaging>pom</packaging>
   <name>RMC_Environnement</name>
+  
+  <build>
+		<resources>
+			<resource>
+				<directory>jboss/standalone/conf</directory>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>assembly-conf</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<finalName>jboss-configuration</finalName>
+							<descriptors>
+								<descriptor>jboss/standalone/assembly.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		</build>
 </project>
