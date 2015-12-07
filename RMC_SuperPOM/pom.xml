@@ -135,23 +135,23 @@
 
 	<!-- Ajouter les plugins management avec leurs versions -->
 	<build>
-		<!-- <directory>${project.basedir}/target</directory> -->
-		<!-- <outputDirectory>${project.build.directory}/classes</outputDirectory> -->
-		<!-- <finalName>${project.artifactId}-${project.version}</finalName> -->
-		<!-- <testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory> -->
-		<!-- <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory> -->
-		<!-- <scriptSourceDirectory>src/main/scripts</scriptSourceDirectory> -->
-		<!-- <testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory> -->
-		<!-- <resources> -->
-		<!-- <resource> -->
-		<!-- <directory>${project.basedir}/src/main/resources</directory> -->
-		<!-- </resource> -->
-		<!-- </resources> -->
-		<!-- <testResources> -->
-		<!-- <testResource> -->
-		<!-- <directory>${project.basedir}/src/test/resources</directory> -->
-		<!-- </testResource> -->
-		<!-- </testResources> -->
+		<directory>${project.basedir}/target</directory>
+		<outputDirectory>${project.build.directory}/classes</outputDirectory>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+		<testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+		<scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
+		<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
+		<resources>
+		<resource>
+		<directory>${project.basedir}/src/main/resources</directory>
+		</resource>
+		</resources>
+		<testResources>
+		<testResource>
+		<directory>${project.basedir}/src/test/resources</directory>
+		</testResource>
+		</testResources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -336,12 +336,14 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-core</artifactId>
 				<version>${springframework.version}</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-expression</artifactId>
 				<version>${springframework.version}</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<!-- Bean Factory and JavaBeans utilities (depends on spring-core) Define 
@@ -350,6 +352,7 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-beans</artifactId>
 				<version>${springframework.version}</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<!-- Aspect Oriented Programming (AOP) Framework (depends on spring-core, 
@@ -358,6 +361,7 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-aop</artifactId>
 				<version>${springframework.version}</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<!-- Application Context (depends on spring-core, spring-expression, spring-aop, 
@@ -367,6 +371,7 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
 				<version>${springframework.version}</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<!-- Various Application Context utilities, including EhCache, JavaMail, 
@@ -375,6 +380,7 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context-support</artifactId>
 				<version>${springframework.version}</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<!-- Support for testing Spring applications with tools such as JUnit 
@@ -384,12 +390,14 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-test</artifactId>
 				<version>${springframework.version}</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
 				<version>${springframework.version}</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<!-- Spring AOP + AspectJ -->
@@ -397,37 +405,48 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-aop</artifactId>
 				<version>${springframework.version}</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-frontend-jaxrs</artifactId>
 				<version>${cxf.version}</version>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-transports-http</artifactId>
 				<version>${cxf.version}</version>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-frontend-jaxws</artifactId>
 				<version>${cxf.version}</version>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-transports-http</artifactId>
 				<version>${cxf.version}</version>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-bindings-soap</artifactId>
 				<version>${cxf.version}</version>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
-
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-bundle</artifactId>
+				<version>2.0.6</version>
+<!-- 				<scope>provided</scope> -->
+			</dependency>
 			<dependency>
 				<groupId>commons-httpclient</groupId>
 				<artifactId>commons-httpclient</artifactId>
@@ -507,11 +526,7 @@
 				<version>1.7</version>
 			</dependency>
 
-			<dependency>
-				<groupId>org.apache.cxf</groupId>
-				<artifactId>cxf-bundle</artifactId>
-				<version>2.0.6</version>
-			</dependency>
+
 
 		</dependencies>
 	</dependencyManagement>
@@ -525,7 +540,7 @@
 		<!-- web apps -->
 		<module>../RMC_WAR</module>
 		<!-- EARS -->
-<!-- 		<module>../RMC_EAR</module> -->
+		<!-- <module>../RMC_EAR</module> -->
 	</modules>
 
 </project>

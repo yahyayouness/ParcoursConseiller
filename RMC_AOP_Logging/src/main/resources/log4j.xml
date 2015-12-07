@@ -43,9 +43,9 @@
 			<param name="levelMax" value="INFO" />
 		</filter>
 	</appender>
-	
-		<appender name="tempsWebservices" class="org.apache.log4j.FileAppender">
-		<param name="file" value="D:/LOG/tempsWebservices.log" />
+
+	<appender name="tempsWebservices" class="org.apache.log4j.FileAppender">
+		<param name="file" value="${jboss.server.log.dir}/tempsWebservices.log" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
 		</layout>
@@ -78,7 +78,7 @@
 		<level value="INFO" />
 		<appender-ref ref="requestResponseWs" />
 	</logger>
-	
+
 	<logger name="com.rmc.aspect">
 		<level value="INFO" />
 		<appender-ref ref="tempsWebservices" />
@@ -101,8 +101,9 @@
 	<root>
 		<priority value="debug" />
 		<appender-ref ref="console" />
-<!-- 		<appender-ref ref="fileDebug" /> -->
-<!-- 		<appender-ref ref="fileErreur" /> -->
+		<appender-ref ref="fileDebug" />
+		<appender-ref ref="fileErreur" />
+		<appender-ref ref="requestResponseWs" />
 	</root>
 
 </log4j:configuration>

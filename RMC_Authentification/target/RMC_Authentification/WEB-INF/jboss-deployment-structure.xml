@@ -1,47 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
-<!-- 	<deployment> -->
-<!-- 		<exclude-subsystems> -->
-<!-- 			<subsystem name="logging" /> -->
+	<deployment>
+		<exclude-subsystems>
+			<subsystem name="logging" />
 			<!-- Exclusion of REST JBoss subsystem -->
-<!-- 			<subsystem name="jaxrs" /> -->
-<!-- 		</exclude-subsystems> -->
+			<subsystem name="jaxrs" />
+		</exclude-subsystems>
 
-<!-- 		<exclusions> -->
-<!-- 			<module name="javaee.api" /> -->
-<!-- 		</exclusions> -->
-		
-<!-- 		<dependencies> -->
-<!-- 			<module name="javax.activation.api" export="true" /> -->
-<!-- 			<module name="javax.annotation.api" export="true" /> -->
-<!-- 			<module name="javax.ejb.api" export="true" /> -->
-<!-- 			<module name="javax.el.api" export="true" /> -->
-<!-- 			<module name="javax.enterprise.api" export="true" /> -->
-<!-- 			<module name="javax.enterprise.deploy.api" export="true" /> -->
-<!-- 			<module name="javax.inject.api" export="true" /> -->
-<!-- 			<module name="javax.interceptor.api" export="true" /> -->
-<!-- 			<module name="javax.jms.api" export="true" /> -->
-<!-- 			<module name="javax.jws.api" export="true" /> -->
-<!-- 			<module name="javax.mail.api" export="true" /> -->
-<!-- 			<module name="javax.management.j2ee.api" export="true" /> -->
-<!-- 			<module name="javax.persistence.api" export="true" /> -->
-<!-- 			<module name="javax.resource.api" export="true" /> -->
-<!-- 			<module name="javax.rmi.api" export="true" /> -->
-<!-- 			<module name="javax.security.auth.message.api" export="true" /> -->
-<!-- 			<module name="javax.security.jacc.api" export="true" /> -->
-<!-- 			<module name="javax.servlet.api" export="true" /> -->
-<!-- 			<module name="javax.servlet.jsp.api" export="true" /> -->
-<!-- 			<module name="javax.transaction.api" export="true" /> -->
-<!-- 			<module name="javax.validation.api" export="true" /> -->
+		<exclusions>
+			<!-- Exclusion of logging JBoss modules -->
+			<module name="org.slf4j" />
+			<module name="org.slf4j.impl" />
+			<module name="org.slf4j.ext" />
+			<module name="org.slf4j.jcl-over-slf4j" />
+			<module name="org.jboss.log4j.logmanager" />
+			<module name="org.jboss.logging" />
+			<module name="org.jboss.logging.jul-to-slf4j-stub" />
+			<!-- Exclusion of REST JBoss module -->
+			<module name="javaee.api" />
+		</exclusions>
 
+		<dependencies>
+			<!-- Java EE JBoss except javax.ws.rs.api -->
+			<module name="javax.annotation.api" />
+			<module name="javax.activation.api" export="true" />
+			<module name="javax.annotation.api" export="true" />
+			<module name="javax.ejb.api" export="true" />
+			<module name="javax.el.api" export="true" />
+			<module name="javax.enterprise.api" export="true" />
+			<module name="javax.enterprise.deploy.api" export="true" />
+			<module name="javax.inject.api" export="true" />
+			<module name="javax.interceptor.api" export="true" />
+			<module name="javax.jms.api" export="true" />
+			<module name="javax.jws.api" export="true" />
+			<module name="javax.mail.api" export="true" />
+			<module name="javax.management.j2ee.api" export="true" />
+			<module name="javax.persistence.api" export="true" />
+			<module name="javax.resource.api" export="true" />
+			<module name="javax.rmi.api" export="true" />
+			<module name="javax.security.auth.message.api" export="true" />
+			<module name="javax.security.jacc.api" export="true" />
+			<module name="javax.servlet.api" export="true" />
+			<module name="javax.servlet.jsp.api" export="true" />
+			<module name="javax.transaction.api" export="true" />
+			<module name="javax.validation.api" export="true" />
 			<!-- <module name="javax.ws.rs.api" export="true" services="export"/> -->
+			<module name="javax.xml.bind.api" export="true" />
+			<module name="javax.xml.registry.api" export="true" />
+			<module name="javax.xml.soap.api" export="true" />
+			<module name="javax.xml.ws.api" export="true" />
 
-<!-- 			<module name="javax.xml.bind.api" export="true" /> -->
-<!-- 			<module name="javax.xml.registry.api" export="true" /> -->
-<!-- 			<module name="javax.xml.soap.api" export="true" /> -->
-<!-- 			<module name="javax.xml.ws.api" export="true" /> -->
-			<!-- This one always goes last. -->
-<!-- 			<module name="javax.api" export="true" /> -->
-<!-- 		</dependencies> -->
-<!-- 	</deployment> -->
+			<!-- Logging Modules -->
+			<module name="org.slf4j" slot="1.7.6" />
+			<module name="org.apache.commons.logging" export="true" />
+
+			<!-- xbean Spring Module -->
+			<module name="org.apache.xbean.spring" slot="3.6" />
+
+			<!-- CXF Module -->
+<!-- 			<module name="org.apache.cxf.impl" slot="2.7.7" export="true" services="export"> -->
+<!-- 				<imports> -->
+<!-- 					<include path="META-INF/cxf" /> -->
+<!-- 					<include path="META-INF" /> -->
+<!-- 					<include path="org**" /> -->
+<!-- 				</imports> -->
+<!-- 			</module> -->
+
+			<!-- Module Spring -->
+			<module name="org.springframework.spring">
+				<imports>
+					<include path="META-INF**" />
+					<include path="org**" />
+				</imports>
+			</module>
+
+			<!-- WARNING - This one always goes last - WARNING -->
+			<module name="javax.api" export="true" />
+
+		</dependencies>
+	</deployment>
 </jboss-deployment-structure>

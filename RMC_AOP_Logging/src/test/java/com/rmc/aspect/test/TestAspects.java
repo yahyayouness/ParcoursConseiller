@@ -19,8 +19,7 @@ import com.rmc.exception.fonctionnelle.accueil.SiretNotValidException;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({ "classpath:applicationContextCommun.xml",
-		"classpath:applicationContextAop.xml" })
+@ContextConfiguration({"classpath:applicationContextCommun.xml", "classpath:applicationContextAop.xml" })
 public class TestAspects {
 
 	/**

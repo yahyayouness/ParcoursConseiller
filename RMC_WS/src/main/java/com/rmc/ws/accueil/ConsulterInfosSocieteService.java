@@ -63,12 +63,12 @@ public class ConsulterInfosSocieteService {
 					XXX_XXX_TIXX_E0000, params);
 			throw new SiretNotValidException(XXX_XXX_TIXX_E0000, message);
 		}
-		final RechercheMosaiqueOutput reponse = consulterInfosSocieteWS
-				.chercherInfosSociete(siret);
+//		final RechercheMosaiqueOutput reponse = consulterInfosSocieteWS
+//				.chercherInfosSociete(siret);
 
 		// FIXME check erreurs de copy de donnée
-		final InfosSociete infosSociete = UtilsCopy.copy(reponse);
+//		final InfosSociete infosSociete = UtilsCopy.copy(reponse);
 
-		return infosSociete;
+		return null;
 	}
 }
