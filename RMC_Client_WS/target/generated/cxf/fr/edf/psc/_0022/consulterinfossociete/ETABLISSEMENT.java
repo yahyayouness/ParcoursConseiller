@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ETABLISSEMENT complex type.
+ * <p>Classe Java pour ETABLISSEMENT complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="ETABLISSEMENT">
@@ -50,7 +50,7 @@ public class ETABLISSEMENT {
     protected List<SCORE> score;
 
     /**
-     * Gets the value of the siret property.
+     * Obtient la valeur de la propriété siret.
      * 
      * @return
      *     possible object is
@@ -62,7 +62,7 @@ public class ETABLISSEMENT {
     }
 
     /**
-     * Sets the value of the siret property.
+     * Définit la valeur de la propriété siret.
      * 
      * @param value
      *     allowed object is
@@ -74,7 +74,7 @@ public class ETABLISSEMENT {
     }
 
     /**
-     * Gets the value of the flgexist property.
+     * Obtient la valeur de la propriété flgexist.
      * 
      * @return
      *     possible object is
@@ -86,7 +86,7 @@ public class ETABLISSEMENT {
     }
 
     /**
-     * Sets the value of the flgexist property.
+     * Définit la valeur de la propriété flgexist.
      * 
      * @param value
      *     allowed object is

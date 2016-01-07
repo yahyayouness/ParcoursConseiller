@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for rechercheMosaique complex type.
+ * <p>Classe Java pour rechercheMosaique complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="rechercheMosaique">
@@ -36,7 +36,7 @@ public class RechercheMosaique {
     protected String siret;
 
     /**
-     * Gets the value of the siret property.
+     * Obtient la valeur de la propriété siret.
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class RechercheMosaique {
     }
 
     /**
-     * Sets the value of the siret property.
+     * Définit la valeur de la propriété siret.
      * 
      * @param value
      *     allowed object is

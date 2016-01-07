@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Classe Java pour anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType>
@@ -41,7 +41,7 @@ public class RechercheMosaiqueInput {
     protected RechercheMosaique rechercheMosaique;
 
     /**
-     * Gets the value of the customHeaderContext property.
+     * Obtient la valeur de la propriété customHeaderContext.
      * 
      * @return
      *     possible object is
@@ -53,7 +53,7 @@ public class RechercheMosaiqueInput {
     }
 
     /**
-     * Sets the value of the customHeaderContext property.
+     * Définit la valeur de la propriété customHeaderContext.
      * 
      * @param value
      *     allowed object is
@@ -65,7 +65,7 @@ public class RechercheMosaiqueInput {
     }
 
     /**
-     * Gets the value of the rechercheMosaique property.
+     * Obtient la valeur de la propriété rechercheMosaique.
      * 
      * @return
      *     possible object is
@@ -77,7 +77,7 @@ public class RechercheMosaiqueInput {
     }
 
     /**
-     * Sets the value of the rechercheMosaique property.
+     * Définit la valeur de la propriété rechercheMosaique.
      * 
      * @param value
      *     allowed object is

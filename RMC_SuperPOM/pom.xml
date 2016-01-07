@@ -143,14 +143,14 @@
 		<scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
 		<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
 		<resources>
-		<resource>
-		<directory>${project.basedir}/src/main/resources</directory>
-		</resource>
+			<resource>
+				<directory>${project.basedir}/src/main/resources</directory>
+			</resource>
 		</resources>
 		<testResources>
-		<testResource>
-		<directory>${project.basedir}/src/test/resources</directory>
-		</testResource>
+			<testResource>
+				<directory>${project.basedir}/src/test/resources</directory>
+			</testResource>
 		</testResources>
 		<plugins>
 			<plugin>
@@ -336,68 +336,64 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-core</artifactId>
 				<version>${springframework.version}</version>
-				<scope>provided</scope>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-expression</artifactId>
 				<version>${springframework.version}</version>
-				<scope>provided</scope>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 
-			<!-- Bean Factory and JavaBeans utilities (depends on spring-core) Define 
-				this if you use Spring Bean APIs (org.springframework.beans.*) -->
+			<!-- Bean Factory and JavaBeans utilities (depends on spring-core) Define this if you use Spring Bean APIs (org.springframework.beans.*) -->
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-beans</artifactId>
 				<version>${springframework.version}</version>
-				<scope>provided</scope>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 
-			<!-- Aspect Oriented Programming (AOP) Framework (depends on spring-core, 
-				spring-beans) Define this if you use Spring AOP APIs (org.springframework.aop.*) -->
+			<!-- Aspect Oriented Programming (AOP) Framework (depends on spring-core, spring-beans) Define this if you use Spring AOP APIs (org.springframework.aop.*) -->
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-aop</artifactId>
 				<version>${springframework.version}</version>
-				<scope>provided</scope>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 
-			<!-- Application Context (depends on spring-core, spring-expression, spring-aop, 
-				spring-beans) This is the central artifact for Spring's Dependency Injection 
-				Container and is generally always defined -->
+			<!-- Application Context (depends on spring-core, spring-expression, spring-aop, spring-beans) This is the central artifact for Spring's Dependency 
+				Injection Container and is generally always defined -->
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
 				<version>${springframework.version}</version>
-				<scope>provided</scope>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 
-			<!-- Various Application Context utilities, including EhCache, JavaMail, 
-				Quartz, and Freemarker integration Define this if you need any of these integrations -->
+			<!-- Various Application Context utilities, including EhCache, JavaMail, Quartz, and Freemarker integration Define this if you need any of 
+				these integrations -->
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context-support</artifactId>
 				<version>${springframework.version}</version>
-				<scope>provided</scope>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 
-			<!-- Support for testing Spring applications with tools such as JUnit 
-				and TestNG This artifact is generally always defined with a 'test' scope 
+			<!-- Support for testing Spring applications with tools such as JUnit and TestNG This artifact is generally always defined with a 'test' scope 
 				for the integration testing framework and unit testing stubs -->
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-test</artifactId>
 				<version>${springframework.version}</version>
-				<scope>provided</scope>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
 				<version>${springframework.version}</version>
-				<scope>provided</scope>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 
 			<!-- Spring AOP + AspectJ -->
@@ -405,48 +401,54 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-aop</artifactId>
 				<version>${springframework.version}</version>
-				<scope>provided</scope>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-frontend-jaxrs</artifactId>
 				<version>${cxf.version}</version>
-<!-- 				<scope>provided</scope> -->
+				<!-- <scope>provided</scope> -->
 			</dependency>
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-transports-http</artifactId>
 				<version>${cxf.version}</version>
-<!-- 				<scope>provided</scope> -->
+				<!-- <scope>provided</scope> -->
 			</dependency>
 
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-frontend-jaxws</artifactId>
 				<version>${cxf.version}</version>
-<!-- 				<scope>provided</scope> -->
+				<!-- <scope>provided</scope> -->
 			</dependency>
 
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-transports-http</artifactId>
 				<version>${cxf.version}</version>
-<!-- 				<scope>provided</scope> -->
+				<!-- <scope>provided</scope> -->
 			</dependency>
 
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-bindings-soap</artifactId>
 				<version>${cxf.version}</version>
-<!-- 				<scope>provided</scope> -->
+				<!-- <scope>provided</scope> -->
 			</dependency>
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-bundle</artifactId>
 				<version>2.0.6</version>
-<!-- 				<scope>provided</scope> -->
+				<!-- <scope>provided</scope> -->
 			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-management</artifactId>
+				<version>2.7.7</version>
+			</dependency>
+
 			<dependency>
 				<groupId>commons-httpclient</groupId>
 				<artifactId>commons-httpclient</artifactId>

@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for consulterInfosSociete_Response complex type.
+ * <p>Classe Java pour consulterInfosSociete_Response complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="consulterInfosSociete_Response">
@@ -40,7 +40,7 @@ public class ConsulterInfosSocieteResponse {
     protected DonneesRetour donneesRetour;
 
     /**
-     * Gets the value of the etatService property.
+     * Obtient la valeur de la propriété etatService.
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class ConsulterInfosSocieteResponse {
     }
 
     /**
-     * Sets the value of the etatService property.
+     * Définit la valeur de la propriété etatService.
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class ConsulterInfosSocieteResponse {
     }
 
     /**
-     * Gets the value of the donneesRetour property.
+     * Obtient la valeur de la propriété donneesRetour.
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class ConsulterInfosSocieteResponse {
     }
 
     /**
-     * Sets the value of the donneesRetour property.
+     * Définit la valeur de la propriété donneesRetour.
      * 
      * @param value
      *     allowed object is

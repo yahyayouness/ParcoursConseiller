@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for CHAMP complex type.
+ * <p>Classe Java pour CHAMP complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="CHAMP">
@@ -40,7 +40,7 @@ public class CHAMP {
     protected String valeurchamp;
 
     /**
-     * Gets the value of the nomchamp property.
+     * Obtient la valeur de la propriété nomchamp.
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class CHAMP {
     }
 
     /**
-     * Sets the value of the nomchamp property.
+     * Définit la valeur de la propriété nomchamp.
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class CHAMP {
     }
 
     /**
-     * Gets the value of the valeurchamp property.
+     * Obtient la valeur de la propriété valeurchamp.
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class CHAMP {
     }
 
     /**
-     * Sets the value of the valeurchamp property.
+     * Définit la valeur de la propriété valeurchamp.
      * 
      * @param value
      *     allowed object is

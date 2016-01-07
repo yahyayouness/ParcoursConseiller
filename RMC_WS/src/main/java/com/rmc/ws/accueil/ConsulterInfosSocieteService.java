@@ -29,7 +29,7 @@ public class ConsulterInfosSocieteService {
 	 * Liste de code des exceptions remontées par le service.
 	 */
 	private static final String XXX_XXX_TIXX_E0000 = "XXX-XXX-TIXX-E0000";
-	
+
 	@Autowired
 	private RmcConfiguration config;
 	/**
@@ -50,25 +50,22 @@ public class ConsulterInfosSocieteService {
 	@Loggable
 	@GET
 	@Path("siret/{num}/")
-	public InfosSociete getInfosSociete(
-			final @PathParam(value = "num") String siret)
-			throws ServletException, SiretNotValidException {
+	public InfosSociete getInfosSociete(final @PathParam(value = "num") String siret) throws ServletException,
+		SiretNotValidException {
 
-		final String test =config.getEnvironnement();
-		
+		final String test = config.getEnvironnement();
+
 		if (null == siret || siret.trim().isEmpty()) {
 
-			Object[] params = new Object [] {siret};
-			final String message = ExceptionUtils.getMessage(
-					XXX_XXX_TIXX_E0000, params);
+			Object[] params = new Object[] {siret };
+			final String message = ExceptionUtils.getMessage(XXX_XXX_TIXX_E0000, params);
 			throw new SiretNotValidException(XXX_XXX_TIXX_E0000, message);
 		}
-//		final RechercheMosaiqueOutput reponse = consulterInfosSocieteWS
-//				.chercherInfosSociete(siret);
+		final RechercheMosaiqueOutput reponse = consulterInfosSocieteWS.chercherInfosSociete(siret);
 
 		// FIXME check erreurs de copy de donnée
-//		final InfosSociete infosSociete = UtilsCopy.copy(reponse);
+		final InfosSociete infosSociete = UtilsCopy.copy(reponse);
 
-		return null;
+		return infosSociete;
 	}
 }

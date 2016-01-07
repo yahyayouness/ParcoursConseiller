@@ -51,11 +51,11 @@
 			<module name="javax.xml.ws.api" export="true" />
 
 			<!-- Logging Modules -->
-			<module name="org.slf4j" slot="1.7.6" />
+<!-- 			<module name="org.slf4j" slot="1.7.6" /> -->
 			<module name="org.apache.commons.logging" export="true" />
 
 			<!-- xbean Spring Module -->
-			<module name="org.apache.xbean.spring" slot="3.6" />
+<!-- 			<module name="org.apache.xbean.spring" slot="3.6" /> -->
 
 			<!-- CXF Module -->
 <!-- 			<module name="org.apache.cxf.impl" slot="2.7.7" export="true" services="export"> -->
@@ -67,12 +67,12 @@
 <!-- 			</module> -->
 
 			<!-- Module Spring -->
-			<module name="org.springframework.spring">
-				<imports>
-					<include path="META-INF**" />
-					<include path="org**" />
-				</imports>
-			</module>
+<!-- 			<module name="org.springframework.spring"> -->
+<!-- 				<imports> -->
+<!-- 					<include path="META-INF**" /> -->
+<!-- 					<include path="org**" /> -->
+<!-- 				</imports> -->
+<!-- 			</module> -->
 
 			<!-- WARNING - This one always goes last - WARNING -->
 			<module name="javax.api" export="true" />

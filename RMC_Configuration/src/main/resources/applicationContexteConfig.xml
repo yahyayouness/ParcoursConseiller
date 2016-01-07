@@ -16,7 +16,7 @@
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>file:D:/ParcoursConseiller/Logiciels/jboss-eap-6.4/standalone/conf/RMC_Configuration.properties</value>
+				<value>${rmc.server.config.url}/RMC_Configuration.properties</value>
 			</list>
 		</property>
 		<property name="fileEncoding">

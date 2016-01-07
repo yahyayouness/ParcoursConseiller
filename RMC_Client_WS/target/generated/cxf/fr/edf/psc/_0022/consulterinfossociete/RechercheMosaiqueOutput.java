@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Classe Java pour anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType>
@@ -55,7 +55,7 @@ public class RechercheMosaiqueOutput {
     protected String faultstring;
 
     /**
-     * Gets the value of the faultactor property.
+     * Obtient la valeur de la propriété faultactor.
      * 
      * @return
      *     possible object is
@@ -67,7 +67,7 @@ public class RechercheMosaiqueOutput {
     }
 
     /**
-     * Sets the value of the faultactor property.
+     * Définit la valeur de la propriété faultactor.
      * 
      * @param value
      *     allowed object is
@@ -79,7 +79,7 @@ public class RechercheMosaiqueOutput {
     }
 
     /**
-     * Gets the value of the customHeaderContext property.
+     * Obtient la valeur de la propriété customHeaderContext.
      * 
      * @return
      *     possible object is
@@ -91,7 +91,7 @@ public class RechercheMosaiqueOutput {
     }
 
     /**
-     * Sets the value of the customHeaderContext property.
+     * Définit la valeur de la propriété customHeaderContext.
      * 
      * @param value
      *     allowed object is
@@ -103,7 +103,7 @@ public class RechercheMosaiqueOutput {
     }
 
     /**
-     * Gets the value of the xmlHierarchyOutput property.
+     * Obtient la valeur de la propriété xmlHierarchyOutput.
      * 
      * @return
      *     possible object is
@@ -115,7 +115,7 @@ public class RechercheMosaiqueOutput {
     }
 
     /**
-     * Sets the value of the xmlHierarchyOutput property.
+     * Définit la valeur de la propriété xmlHierarchyOutput.
      * 
      * @param value
      *     allowed object is
@@ -127,7 +127,7 @@ public class RechercheMosaiqueOutput {
     }
 
     /**
-     * Gets the value of the consulterInfosSocieteResponse property.
+     * Obtient la valeur de la propriété consulterInfosSocieteResponse.
      * 
      * @return
      *     possible object is
@@ -139,7 +139,7 @@ public class RechercheMosaiqueOutput {
     }
 
     /**
-     * Sets the value of the consulterInfosSocieteResponse property.
+     * Définit la valeur de la propriété consulterInfosSocieteResponse.
      * 
      * @param value
      *     allowed object is
@@ -151,7 +151,7 @@ public class RechercheMosaiqueOutput {
     }
 
     /**
-     * Gets the value of the faultcode property.
+     * Obtient la valeur de la propriété faultcode.
      * 
      * @return
      *     possible object is
@@ -163,7 +163,7 @@ public class RechercheMosaiqueOutput {
     }
 
     /**
-     * Sets the value of the faultcode property.
+     * Définit la valeur de la propriété faultcode.
      * 
      * @param value
      *     allowed object is
@@ -175,7 +175,7 @@ public class RechercheMosaiqueOutput {
     }
 
     /**
-     * Gets the value of the faultstring property.
+     * Obtient la valeur de la propriété faultstring.
      * 
      * @return
      *     possible object is
@@ -187,7 +187,7 @@ public class RechercheMosaiqueOutput {
     }
 
     /**
-     * Sets the value of the faultstring property.
+     * Définit la valeur de la propriété faultstring.
      * 
      * @param value
      *     allowed object is

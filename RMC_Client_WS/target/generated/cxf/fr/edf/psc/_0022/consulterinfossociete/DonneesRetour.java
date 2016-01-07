@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for DonneesRetour complex type.
+ * <p>Classe Java pour DonneesRetour complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="DonneesRetour">
@@ -36,7 +36,7 @@ public class DonneesRetour {
     protected MosaiqueMessageOut mosaiqueMessageOut;
 
     /**
-     * Gets the value of the mosaiqueMessageOut property.
+     * Obtient la valeur de la propriété mosaiqueMessageOut.
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class DonneesRetour {
     }
 
     /**
-     * Sets the value of the mosaiqueMessageOut property.
+     * Définit la valeur de la propriété mosaiqueMessageOut.
      * 
      * @param value
      *     allowed object is

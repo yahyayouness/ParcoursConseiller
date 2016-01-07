@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for EtatService complex type.
+ * <p>Classe Java pour EtatService complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="EtatService">
@@ -44,7 +44,7 @@ public class EtatService {
     protected String etapeService;
 
     /**
-     * Gets the value of the codeEtatService property.
+     * Obtient la valeur de la propriété codeEtatService.
      * 
      * @return
      *     possible object is
@@ -56,7 +56,7 @@ public class EtatService {
     }
 
     /**
-     * Sets the value of the codeEtatService property.
+     * Définit la valeur de la propriété codeEtatService.
      * 
      * @param value
      *     allowed object is
@@ -68,7 +68,7 @@ public class EtatService {
     }
 
     /**
-     * Gets the value of the libelleEtatService property.
+     * Obtient la valeur de la propriété libelleEtatService.
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class EtatService {
     }
 
     /**
-     * Sets the value of the libelleEtatService property.
+     * Définit la valeur de la propriété libelleEtatService.
      * 
      * @param value
      *     allowed object is
@@ -92,7 +92,7 @@ public class EtatService {
     }
 
     /**
-     * Gets the value of the etapeService property.
+     * Obtient la valeur de la propriété etapeService.
      * 
      * @return
      *     possible object is
@@ -104,7 +104,7 @@ public class EtatService {
     }
 
     /**
-     * Sets the value of the etapeService property.
+     * Définit la valeur de la propriété etapeService.
      * 
      * @param value
      *     allowed object is

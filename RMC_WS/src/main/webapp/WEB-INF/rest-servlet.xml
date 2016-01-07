@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cxf="http://cxf.apache.org/core"
-	xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
-	xmlns:context="http://www.springframework.org/schema/context"
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cxf="http://cxf.apache.org/core"
+	xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:jaxrs="http://cxf.apache.org/jaxrs" xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context-3.2.xsd
@@ -26,11 +24,16 @@
 		<property name="prettyLogging" value="true" />
 	</bean>
 
-	<bean id="loggingInInterceptor" class="org.apache.cxf.interceptor.LoggingInInterceptor"
-		parent="abstractLoggingInterceptor" />
+	<bean id="loggingInInterceptor" class="org.apache.cxf.interceptor.LoggingInInterceptor" parent="abstractLoggingInterceptor" />
 
-	<bean id="loggingOutInterceptor" class="org.apache.cxf.interceptor.LoggingOutInterceptor"
-		parent="abstractLoggingInterceptor" />
+	<bean id="loggingOutInterceptor" class="org.apache.cxf.interceptor.LoggingOutInterceptor" parent="abstractLoggingInterceptor" />
+
+
+<!-- 	<bean id="CounterRepository" class="org.apache.cxf.management.counters.CounterRepository"> -->
+<!-- 		<property name="bus" ref="cxf" /> -->
+<!-- 	</bean> -->
+
+
 
 	<cxf:bus>
 		<cxf:inInterceptors>
@@ -45,8 +48,12 @@
 		<cxf:inFaultInterceptors>
 			<ref bean="loggingInInterceptor" />
 		</cxf:inFaultInterceptors>
+<!-- 		<cxf:properties> -->
+<!-- 			<entry key="bus.jmx.enabled" value="true" /> -->
+<!-- 			<entry key="bus.jmx.usePlatformMBeanServer" value="true" /> -->
+<!-- 			<entry key="bus.jmx.JMXServiceURL" value="service:jmx:rmi:///jndi/rmi://localhost:9914/jmxrmi" /> -->
+<!-- 		</cxf:properties> -->
 	</cxf:bus>
-
 
 
 	<bean id="infosSocieteService" class="com.rmc.ws.accueil.ConsulterInfosSocieteService"></bean>
@@ -63,7 +70,26 @@
 			<ref bean='exceptionHandler' />
 		</jaxrs:providers>
 	</jaxrs:server>
+	
+	<bean id="basicAuthentificationService" class="com.rmc.authentification.BasicAuthentificationService"></bean>
+	<bean id="tokenAuthentificationService" class="com.rmc.authentification.TokenAuthentificationService"></bean>
 
+	<jaxrs:server id="basicAuthentification" address="/basicAuth">
+		<jaxrs:serviceBeans>
+			<ref bean="basicAuthentificationService" />
+		</jaxrs:serviceBeans>
+		<jaxrs:providers>
+			<ref bean='jsonProvider' />
+		</jaxrs:providers>
+	</jaxrs:server>
 
+	<jaxrs:server id="tokenAuthentification" address="/tokenAuth">
+		<jaxrs:serviceBeans>
+			<ref bean="tokenAuthentificationService" />
+		</jaxrs:serviceBeans>
+		<jaxrs:providers>
+			<ref bean='jsonProvider' />
+		</jaxrs:providers>
+	</jaxrs:server>
 
 </beans>

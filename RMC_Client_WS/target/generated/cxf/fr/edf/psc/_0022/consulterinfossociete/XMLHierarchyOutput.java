@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Classe Java pour anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType>
@@ -38,7 +38,7 @@ public class XMLHierarchyOutput {
     protected Object any;
 
     /**
-     * Gets the value of the any property.
+     * Obtient la valeur de la propriété any.
      * 
      * @return
      *     possible object is
@@ -50,7 +50,7 @@ public class XMLHierarchyOutput {
     }
 
     /**
-     * Sets the value of the any property.
+     * Définit la valeur de la propriété any.
      * 
      * @param value
      *     allowed object is
